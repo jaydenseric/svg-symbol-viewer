@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url('./fonts/roboto-condensed-400-normal.woff2') format('woff2'), url('./fonts/roboto-condensed-400-normal.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-weight: 700;
+  src: url('./fonts/roboto-condensed-700-normal.woff2') format('woff2'), url('./fonts/roboto-condensed-700-normal.woff') format('woff');
+}
+
+:global {
+  & html {
+    text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+  }
+  & body {
+    margin: 1em;
+    line-height: 1;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: color(black tint(13%));
+  }
+  & ::selection {
+    background-color: color(#f90 alpha(50%));
+    opacity: 0;
+  }
+}

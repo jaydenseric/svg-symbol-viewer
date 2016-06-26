@@ -1,0 +1,5 @@
+node_modules/
+/public/bundle/
+.env
+*.log
+.DS_Store

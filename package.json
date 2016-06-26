@@ -1,0 +1,143 @@
+{
+  "name": "svg-symbol-viewer",
+  "version": "0.1.0-alpha.1",
+  "description": "A simple drag-and-drop SVG symbol viewer web app.",
+  "author": {
+    "name": "Jayden Seric",
+    "email": "me@jaydenseric.com",
+    "url": "http://jaydenseric.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaydenseric/svg-symbol-viewer"
+  },
+  "bugs": {
+    "url": "https://github.com/jaydenseric/svg-symbol-viewer/issues"
+  },
+  "scripts": {
+    "lint:js": "better-npm-run lint:js",
+    "lint:css": "better-npm-run lint:css",
+    "clean": "better-npm-run clean",
+    "build": "better-npm-run build",
+    "start": "better-npm-run start"
+  },
+  "betterScripts": {
+    "lint:js": {
+      "command": "eslint . --ext .js --ext .jsx --ignore-pattern public/bundle || true"
+    },
+    "lint:css": {
+      "command": "stylelint **/**/*.postcss || true"
+    },
+    "clean": {
+      "command": "rm -r public/bundle || true"
+    },
+    "build": {
+      "command": "better-npm-run clean && webpack --progress"
+    },
+    "start": {
+      "command": "node server"
+    }
+  },
+  "dependencies": {
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "better-npm-run": "0.0.9",
+    "classnames": "^2.2.5",
+    "css-loader": "^0.23.1",
+    "exports-loader": "^0.6.3",
+    "express": "^4.14.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "imports-loader": "^0.6.5",
+    "postcss-cssnext": "^2.6.0",
+    "postcss-loader": "^0.9.1",
+    "postcss-reporter": "^1.3.3",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "style-loader": "^0.13.1",
+    "svgxuse": "^1.1.17",
+    "webpack": "^1.13.1",
+    "whatwg-fetch": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.1.0",
+    "babel-preset-react-hmre": "^1.1.1",
+    "eslint": "^2.13.1",
+    "eslint-config-standard": "^5.3.1",
+    "eslint-config-standard-react": "^2.5.0",
+    "eslint-plugin-promise": "^1.3.2",
+    "eslint-plugin-react": "^5.2.2",
+    "eslint-plugin-standard": "^1.3.2",
+    "react-hot-loader": "^1.3.0",
+    "stylelint": "^6.7.1",
+    "stylelint-config-standard": "^9.0.0",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-hot-middleware": "^2.10.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-0",
+      "react"
+    ],
+    "plugins": [
+      "transform-decorators-legacy"
+    ],
+    "env": {
+      "development": {
+        "presets": [
+          "react-hmre"
+        ]
+      }
+    }
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": [
+      "standard",
+      "standard-react"
+    ],
+    "rules": {
+      "valid-jsdoc": [
+        2,
+        {
+          "requireReturn": false,
+          "prefer": {
+            "return": "returns"
+          }
+        }
+      ]
+    },
+    "globals": {
+      "fetch": false
+    }
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "ignoreFiles": "public/bundle/**",
+    "rules": {
+      "at-rule-empty-line-before": [
+        "always",
+        {
+          "except": [
+            "blockless-group",
+            "all-nested"
+          ],
+          "ignore": [
+            "after-comment"
+          ]
+        }
+      ],
+      "font-family-name-quotes": "always-where-recommended",
+      "function-url-quotes": "always",
+      "number-leading-zero": "never",
+      "string-quotes": "single"
+    }
+  }
+}

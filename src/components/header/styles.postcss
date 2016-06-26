@@ -1,0 +1,22 @@
+@custom-media --breakpoint-1 (width >= 30em);
+
+.container {
+  padding: 2em 1.5em;
+  text-align: center;
+  font-size: 150%;
+  background-color: #f90;
+  @media (--breakpoint-1) {
+    font-size: 200%;
+  }
+}
+
+.logo {
+  width: 2em;
+  max-width: 25%;
+  vertical-align: middle;
+}
+
+h1 {
+  display: inline;
+  font-size: inherit;
+}
