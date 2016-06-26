@@ -1,0 +1,38 @@
+:root {
+  --grid-size: 8px;
+  --grid-color: #ccc;
+  --gradient: linear-gradient(45deg, var(--grid-color) 25%, transparent 25%, transparent 75%, var(--grid-color) 75%, var(--grid-color) 100%);
+}
+
+@keyframes entry {
+  from {
+    opacity: 0;
+    transform: scale(.8);
+  }
+}
+
+.container {
+  margin: 0;
+  padding: .75em;
+  text-align: center;
+  & > li {
+    display: inline-block;
+    padding: inherit;
+    animation: entry .6s;
+    & > figure {
+      margin: 0;
+      & figcaption {
+        margin-top: .5em;
+      }
+    }
+  }
+}
+
+.symbol {
+  width: 5em;
+  height: 5em;
+  background-color: white;
+  background-image: var(--gradient), var(--gradient);
+  background-size: calc(var(--grid-size) * 2) calc(var(--grid-size) * 2);
+  background-position: 0 0, var(--grid-size) var(--grid-size);
+}
