@@ -31,7 +31,7 @@ export default class Tool extends Component {
     const styles = require('./styles.postcss')
     return (
       <main className={styles.container}>
-        <FileDropZone onDrop={this.onDrop} />
+        <FileDropZone label='Drop SVG containing symbols' onDrop={this.onDrop} />
         <div className={styles.svg} dangerouslySetInnerHTML={{__html: this.state.svg}} />
         <SymbolList symbols={this.state.symbols} />
       </main>

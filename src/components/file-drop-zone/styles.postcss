@@ -1,14 +1,17 @@
 .container {
-  border: 2px dashed;
+  border: 2px dashed color(#f90 alpha(20%));
   padding: 1.5em;
   text-align: center;
-  opacity: .6;
-  transition: opacity .25s;
+  color: color(#f90 alpha(70%));
+  background-color: color(#f90 alpha(6%));
+  transition: .25s;
   & h1 {
     margin: 0;
     font-size: inherit;
   }
   &.hover {
-    opacity: 1;
+    border-color: #f90;
+    color: #f90;
+    background-color: color(#f90 alpha(10%));
   }
 }

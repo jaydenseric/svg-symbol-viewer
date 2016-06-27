@@ -2,7 +2,7 @@ import React, {Component, PropTypes} from 'react'
 
 export default class SymbolList extends Component {
   static propTypes = {
-    symbols: PropTypes.array
+    symbols: PropTypes.array.isRequired
   }
 
   render () {

@@ -3,15 +3,11 @@ import classNames from 'classnames/bind'
 
 export default class FileDropZone extends Component {
   static propTypes = {
-    label: PropTypes.string,
+    label: PropTypes.string.isRequired,
     onDragEnter: PropTypes.func,
     onDragOver: PropTypes.func,
     onDrop: PropTypes.func,
     onDragLeave: PropTypes.func
-  }
-
-  static defaultProps = {
-    label: 'Drop SVG file'
   }
 
   constructor () {
@@ -33,6 +29,7 @@ export default class FileDropZone extends Component {
 
   handleDrop = (event) => {
     event.preventDefault()
+    this.setState({dragging: false})
     if (event.dataTransfer.files.length > 0) {
       const file = event.dataTransfer.files[0]
       if (file.type === 'image/svg+xml') {
