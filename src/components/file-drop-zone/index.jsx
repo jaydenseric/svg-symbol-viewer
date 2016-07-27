@@ -18,17 +18,17 @@ export default class FileDropZone extends Component {
     }
   }
 
-  handleDragEnter = (event) => {
+  handleDragEnter = event => {
     this.setState({dragging: true})
     if (typeof this.props.onDragEnter === 'function') this.props.onDragEnter(event)
   }
 
-  handleDragOver = (event) => {
+  handleDragOver = event => {
     event.preventDefault()
     if (typeof this.props.onDragOver === 'function') this.props.onDragOver(event)
   }
 
-  handleDrop = (event) => {
+  handleDrop = event => {
     event.preventDefault()
     this.setState({dragging: false})
     if (event.dataTransfer.files.length > 0) {
@@ -40,7 +40,7 @@ export default class FileDropZone extends Component {
     }
   }
 
-  handleDragLeave = (event) => {
+  handleDragLeave = event => {
     this.setState({dragging: false})
     if (typeof this.props.onDragLeave === 'function') this.props.onDragLeave(event)
   }

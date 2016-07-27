@@ -21,7 +21,7 @@ app.get('*', (request, response) => {
   response.sendFile(path.resolve(__dirname, '../public/index.html'))
 })
 
-app.listen(process.env.PORT, (error) => {
+app.listen(process.env.PORT, error => {
   if (error) return console.log(error)
   return console.info(`Listening on port ${process.env.PORT} in ${process.env.NODE_ENV} mode`)
 })
