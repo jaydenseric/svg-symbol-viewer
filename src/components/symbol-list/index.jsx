@@ -1,4 +1,5 @@
 import React, {Component, PropTypes} from 'react'
+import styles from './styles.postcss'
 
 export default class SymbolList extends Component {
   static propTypes = {
@@ -6,7 +7,6 @@ export default class SymbolList extends Component {
   }
 
   render () {
-    const styles = require('./styles.postcss')
     return (
       <ol className={styles.container}>
         {this.props.symbols.map((symbol, index) => {

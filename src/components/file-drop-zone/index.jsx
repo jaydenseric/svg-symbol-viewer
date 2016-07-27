@@ -1,5 +1,6 @@
 import React, {Component, PropTypes} from 'react'
 import classNames from 'classnames/bind'
+import styles from './styles.postcss'
 
 export default class FileDropZone extends Component {
   static propTypes = {
@@ -45,7 +46,6 @@ export default class FileDropZone extends Component {
   }
 
   render () {
-    const styles = require('./styles.postcss')
     const cx = classNames.bind(styles)
     const className = cx(
       'container',

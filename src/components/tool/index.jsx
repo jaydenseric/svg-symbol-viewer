@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import FileDropZone from '../file-drop-zone'
 import SymbolList from '../symbol-list'
+import styles from './styles.postcss'
 
 export default class Tool extends Component {
   constructor () {
@@ -28,7 +29,6 @@ export default class Tool extends Component {
   }
 
   render () {
-    const styles = require('./styles.postcss')
     return (
       <main className={styles.container}>
         <FileDropZone label='Drop SVG containing symbols' onDrop={this.onDrop} />

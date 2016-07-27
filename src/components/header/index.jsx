@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
+import styles from './styles.postcss'
+import logo from './svg-symbol-viewer-logo.svg'
 
 export default class Header extends Component {
   render () {
-    const styles = require('./styles.postcss')
-    const logo = require('./svg-symbol-viewer-logo.svg')
     return (
       <header className={styles.container}>
         <img className={styles.logo} src={logo} alt='SVG symbol viewer logo' />
