@@ -7,8 +7,8 @@ export default class Tool extends Component {
   constructor () {
     super()
     this.state = {
-      svg: '',
-      symbols: []
+      svg: null,
+      symbols: null
     }
   }
 
@@ -17,9 +17,7 @@ export default class Tool extends Component {
     reader.onload = () => {
       const parser = new window.DOMParser()
       const doc = parser.parseFromString(reader.result, 'image/svg+xml')
-      const idList = Array.from(doc.querySelectorAll('symbol[id]')).map(element => {
-        return element.id
-      })
+      const idList = Array.from(doc.querySelectorAll('symbol[id]')).map(element => element.id)
       this.setState({
         svg: reader.result,
         symbols: idList
@@ -32,8 +30,8 @@ export default class Tool extends Component {
     return (
       <main className={styles.Tool}>
         <FileDropZone label="Drop SVG containing symbols" onDrop={this.onDrop} />
-        <div className={styles.svg} dangerouslySetInnerHTML={{__html: this.state.svg}} />
-        <SymbolList symbols={this.state.symbols} />
+        {this.state.svg !== null && <div className={styles.svg} dangerouslySetInnerHTML={{__html: this.state.svg}} />}
+        {this.state.symbols !== null && <SymbolList symbols={this.state.symbols} />}
       </main>
     )
   }

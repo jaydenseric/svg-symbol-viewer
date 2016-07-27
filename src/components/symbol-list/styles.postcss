@@ -29,10 +29,14 @@
 }
 
 .symbol {
-  width: 5em;
-  height: 5em;
+  width: 8em;
+  height: 8em;
+  stroke-width: 0;
+  stroke: black;
+  fill: black;
   background-color: white;
   background-image: var(--gradient), var(--gradient);
   background-size: calc(var(--grid-size) * 2) calc(var(--grid-size) * 2);
   background-position: 0 0, var(--grid-size) var(--grid-size);
+  box-shadow: 0 .1em .4em color(black alpha(20%));
 }
