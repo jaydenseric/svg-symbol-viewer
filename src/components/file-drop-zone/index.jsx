@@ -2,14 +2,6 @@ import React, {Component, PropTypes} from 'react'
 import styles from './styles.postcss'
 
 export default class FileDropZone extends Component {
-  static propTypes = {
-    label: PropTypes.string.isRequired,
-    onDragEnter: PropTypes.func,
-    onDragOver: PropTypes.func,
-    onDrop: PropTypes.func,
-    onDragLeave: PropTypes.func
-  }
-
   constructor () {
     super()
     this.state = {
@@ -17,14 +9,21 @@ export default class FileDropZone extends Component {
     }
   }
 
+  static propTypes = {
+    label: PropTypes.string.isRequired,
+    onDrop: PropTypes.func
+  }
+
   handleDragEnter = event => {
     this.setState({dragging: true})
-    if (typeof this.props.onDragEnter === 'function') this.props.onDragEnter(event)
   }
 
   handleDragOver = event => {
     event.preventDefault()
-    if (typeof this.props.onDragOver === 'function') this.props.onDragOver(event)
+  }
+
+  handleDragLeave = event => {
+    this.setState({dragging: false})
   }
 
   handleDrop = event => {
@@ -39,14 +38,9 @@ export default class FileDropZone extends Component {
     }
   }
 
-  handleDragLeave = event => {
-    this.setState({dragging: false})
-    if (typeof this.props.onDragLeave === 'function') this.props.onDragLeave(event)
-  }
-
   render () {
     return (
-      <section className={this.state.dragging ? styles.FileDropZone_hover : styles.FileDropZone} onDragEnter={this.handleDragEnter} onDragOver={this.handleDragOver} onDrop={this.handleDrop} onDragLeave={this.handleDragLeave}>
+      <section className={this.state.dragging ? styles.FileDropZone_hover : styles.FileDropZone} onDragEnter={this.handleDragEnter} onDragOver={this.handleDragOver} onDragLeave={this.handleDragLeave} onDrop={this.handleDrop}>
         <h1>{this.state.filename ? this.state.filename : this.props.label}</h1>
       </section>
     )
