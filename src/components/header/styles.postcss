@@ -1,6 +1,6 @@
 @custom-media --breakpoint-1 (width >= 30em);
 
-.container {
+.Header {
   padding: 1em;
   text-align: center;
   font-size: 150%;
@@ -9,16 +9,15 @@
   @media (--breakpoint-1) {
     font-size: 180%;
   }
+  & > h1 {
+    display: inline-block;
+    margin: .5em;
+    font-size: inherit;
+  }
 }
 
 .logo {
   width: 2em;
   max-width: 25%;
   vertical-align: middle;
-}
-
-h1 {
-  display: inline-block;
-  margin: .5em;
-  font-size: inherit;
 }

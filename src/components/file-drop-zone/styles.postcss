@@ -1,17 +1,19 @@
-.container {
+.FileDropZone {
   border: 2px dashed color(#f90 alpha(20%));
   padding: 1.5em;
   text-align: center;
   color: color(#f90 alpha(70%));
   background-color: color(#f90 alpha(6%));
   transition: .25s;
-  & h1 {
+  & > h1 {
     margin: 0;
     font-size: inherit;
   }
-  &.hover {
-    border-color: #f90;
-    color: #f90;
-    background-color: color(#f90 alpha(10%));
-  }
+}
+
+.FileDropZone_hover {
+  composes: FileDropZone;
+  border-color: #f90;
+  color: #f90;
+  background-color: color(#f90 alpha(10%));
 }

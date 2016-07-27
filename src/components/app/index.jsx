@@ -1,10 +1,10 @@
 import React from 'react'
 import Header from '../header'
 import Tool from '../tool'
-import styles from './styles.postcss'
+import './styles.postcss'
 
 const App = () => (
-  <div className={styles.app}>
+  <div>
     <Header />
     <Tool />
   </div>

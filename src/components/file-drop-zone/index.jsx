@@ -1,5 +1,4 @@
 import React, {Component, PropTypes} from 'react'
-import classNames from 'classnames/bind'
 import styles from './styles.postcss'
 
 export default class FileDropZone extends Component {
@@ -46,13 +45,8 @@ export default class FileDropZone extends Component {
   }
 
   render () {
-    const cx = classNames.bind(styles)
-    const className = cx(
-      'container',
-      {'hover': this.state.dragging}
-    )
     return (
-      <section className={className} onDragEnter={this.handleDragEnter} onDragOver={this.handleDragOver} onDrop={this.handleDrop} onDragLeave={this.handleDragLeave}>
+      <section className={this.state.dragging ? styles.FileDropZone_hover : styles.FileDropZone} onDragEnter={this.handleDragEnter} onDragOver={this.handleDragOver} onDrop={this.handleDrop} onDragLeave={this.handleDragLeave}>
         <h1>{this.state.filename ? this.state.filename : this.props.label}</h1>
       </section>
     )

@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react'
 import styles from './styles.postcss'
 
 const SymbolList = props => (
-  <ol className={styles.container}>
+  <ol className={styles.SymbolList}>
     {props.symbols.map((symbol, index) => (
       <li key={index}>
         <figure>
