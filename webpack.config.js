@@ -46,7 +46,7 @@ if (process.env.NODE_ENV === 'production') {
   const ExtractTextPlugin = require('extract-text-webpack-plugin')
   config.module.loaders.push({
     test: /\.(css|postcss)$/,
-    loader: ExtractTextPlugin.extract('style', 'css?-autoprefixer&modules!postcss')
+    loader: ExtractTextPlugin.extract('style', 'css?-autoprefixer&modules&importLoaders=1!postcss')
   })
   config.plugins.push(
     new ExtractTextPlugin('bundle.css'),
@@ -60,7 +60,7 @@ if (process.env.NODE_ENV === 'production') {
   config.entry.push('webpack-hot-middleware/client')
   config.module.loaders.push({
     test: /\.(css|postcss)$/,
-    loader: 'style!css?-autoprefixer&modules!postcss'
+    loader: 'style!css?-autoprefixer&modules&importLoaders=1!postcss'
   })
   config.plugins.push(
     new webpack.optimize.OccurrenceOrderPlugin(),
