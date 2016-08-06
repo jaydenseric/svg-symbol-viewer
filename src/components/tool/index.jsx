@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
-import FileDropZone from '../file-drop-zone'
-import SymbolList from '../symbol-list'
+import FileDropZone from 'components/file-drop-zone'
+import SymbolList from 'components/symbol-list'
 import styles from './styles.postcss'
 
 export default class Tool extends Component {
