@@ -7,7 +7,7 @@ const SymbolList = props => (
       <li key={index}>
         <figure>
           <svg className={styles.symbol}>
-            <use xlinkHref={'#' + symbol}></use>
+            <use xlinkHref={'#' + symbol} />
           </svg>
           <figcaption>{symbol}</figcaption>
         </figure>

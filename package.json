@@ -17,6 +17,7 @@
   },
   "scripts": {
     "lint:js": "better-npm-run lint:js",
+    "lint:js:fix": "better-npm-run lint:js:fix",
     "lint:css": "better-npm-run lint:css",
     "clean": "better-npm-run clean",
     "build": "better-npm-run build",
@@ -24,10 +25,13 @@
   },
   "betterScripts": {
     "lint:js": {
-      "command": "eslint . --ext .js --ext .jsx --ignore-pattern public/bundle || true"
+      "command": "eslint . --ext .js --ext .jsx --ignore-pattern public/bundle"
+    },
+    "lint:js:fix": {
+      "command": "better-npm-run lint:js --fix"
     },
     "lint:css": {
-      "command": "stylelint **/**/*.postcss || true"
+      "command": "stylelint '**/*.postcss'"
     },
     "clean": {
       "command": "rm -r public/bundle || true"
@@ -129,7 +133,7 @@
         "always",
         {
           "except": [
-            "blockless-group",
+            "blockless-after-same-name-blockless",
             "all-nested"
           ],
           "ignore": [
@@ -140,6 +144,7 @@
       "font-family-name-quotes": "always-where-recommended",
       "function-url-quotes": "always",
       "number-leading-zero": "never",
+      "rule-nested-empty-line-before": "never",
       "string-quotes": "single"
     }
   }

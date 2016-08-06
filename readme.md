@@ -24,6 +24,7 @@ Ensure your editor supports:
 | Command               | Purpose                                         |
 |:----------------------|:------------------------------------------------|
 | `npm run lint:js`     | Lint JS (see `eslintConfig` in `package.json`). |
+| `npm run lint:js:fix` | Lint JS and automatically fix issues.           |
 | `npm run lint:css`    | Lint CSS (see `stylelint` in `package.json`).   |
 | `npm run clean`       | Delete `/public/bundle`.                        |
 | `npm run build`       | Compile JS and CSS to `/public/bundle`.         |
