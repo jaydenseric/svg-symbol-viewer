@@ -2,13 +2,14 @@ const path = require('path')
 const webpack = require('webpack')
 const cssnext = require('postcss-cssnext')
 const reporter = require('postcss-reporter')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const config = {
   entry: [
-    path.join(__dirname, 'src/client.jsx')
+    './src/client.jsx'
   ],
   output: {
-    path: path.join(__dirname, 'public/bundle'),
+    path: path.resolve('./public/bundle'),
     publicPath: '/bundle/',
     filename: 'bundle.js'
   },
@@ -24,7 +25,7 @@ const config = {
   },
   resolve: {
     extensions: ['', '.js', '.jsx'],
-    root: path.join(__dirname, 'src')
+    root: path.resolve('./src')
   },
   postcss: [
     cssnext,
@@ -43,7 +44,6 @@ const config = {
 }
 
 if (process.env.NODE_ENV === 'production') {
-  const ExtractTextPlugin = require('extract-text-webpack-plugin')
   config.module.loaders.push({
     test: /\.(css|postcss)$/,
     loader: ExtractTextPlugin.extract('style', 'css?-autoprefixer&modules&importLoaders=1!postcss')
