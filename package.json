@@ -21,7 +21,7 @@
     "lint:css": "stylelint '**/*.postcss'",
     "clean": "rm -r public/bundle || true",
     "prebuild": "npm run clean",
-    "build": "zoo webpack --progress",
+    "build": "zoo webpack -p --progress",
     "start": "zoo node server"
   },
   "dependencies": {
@@ -49,37 +49,33 @@
     "eslint-plugin-react": "^6.0.0",
     "eslint-plugin-standard": "^2.0.0",
     "exports-loader": "^0.6.3",
-    "extract-text-webpack-plugin": "^1.0.1",
+    "extract-text-webpack-plugin": "^2.0.0-beta.3",
     "file-loader": "^0.9.0",
     "imports-loader": "^0.6.5",
     "postcss-cssnext": "^2.7.0",
     "postcss-loader": "^0.9.1",
     "postcss-reporter": "^1.4.1",
-    "react-hot-loader": "^1.3.0",
     "style-loader": "^0.13.1",
     "stylelint": "^7.1.0",
     "stylelint-config-standard": "^12.0.0",
-    "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.14.1",
-    "webpack-hot-middleware": "^2.12.2",
+    "webpack": "^2.1.0-beta.20",
     "zoo": "^0.1.8"
   },
   "babel": {
     "presets": [
-      "es2015",
+      [
+        "es2015",
+        {
+          "modules": false,
+          "loose": true
+        }
+      ],
       "stage-0",
       "react"
     ],
     "plugins": [
       "transform-decorators-legacy"
-    ],
-    "env": {
-      "development": {
-        "presets": [
-          "react-hmre"
-        ]
-      }
-    }
+    ]
   },
   "eslintConfig": {
     "parser": "babel-eslint",

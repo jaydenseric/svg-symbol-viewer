@@ -17,15 +17,15 @@ const config = {
     loaders: [{
       test: /\.(js|jsx)$/,
       exclude: /node_modules/,
-      loaders: ['react-hot', 'babel']
+      loader: 'babel'
     }, {
       test: /\.(svg|png|jpg|webm|mp4|woff|woff2)$/,
       loader: 'file'
     }]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx'],
-    root: path.resolve('./src')
+    extensions: ['.js', '.jsx'],
+    modules: [path.resolve('./src'), 'node_modules']
   },
   postcss: [
     cssnext,
@@ -42,25 +42,20 @@ const config = {
 if (process.env.NODE_ENV === 'production') {
   config.module.loaders.push({
     test: /\.(css|postcss)$/,
-    loader: ExtractTextPlugin.extract('style', 'css?-autoprefixer&modules&importLoaders=1!postcss')
+    loader: ExtractTextPlugin.extract({
+      fallbackLoader: 'style',
+      loader: 'css?-autoprefixer&modules&importLoaders=1!postcss'
+    })
   })
   config.plugins.push(
-    new ExtractTextPlugin('bundle.css'),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      }
-    })
+    new ExtractTextPlugin('bundle.css')
   )
 } else {
-  config.entry.push('webpack-hot-middleware/client')
   config.module.loaders.push({
     test: /\.(css|postcss)$/,
     loader: 'style!css?-autoprefixer&modules&importLoaders=1!postcss'
   })
   config.plugins.push(
-    new webpack.optimize.OccurrenceOrderPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
   )
 }
