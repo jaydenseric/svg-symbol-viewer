@@ -1,6 +1,5 @@
 {
   "name": "svg-symbol-viewer",
-  "version": "0.1.0-alpha.2",
   "description": "A simple drag-and-drop SVG symbol viewer web app.",
   "author": {
     "name": "Jayden Seric",
@@ -15,6 +14,7 @@
   "bugs": {
     "url": "https://github.com/jaydenseric/svg-symbol-viewer/issues"
   },
+  "private": true,
   "scripts": {
     "lint:js": "eslint . --ext .js --ext .jsx --ignore-pattern public/bundle",
     "lint:js:fix": "npm run lint:js -- --fix",
