@@ -19,7 +19,7 @@
     "lint:js": "eslint . --ext .js --ext .jsx --ignore-pattern public/bundle",
     "lint:js:fix": "npm run lint:js -- --fix",
     "lint:css": "stylelint '**/*.postcss'",
-    "clean": "rm -r public/bundle || true",
+    "clean": "rimraf public/bundle",
     "prebuild": "npm run clean",
     "build": "zoo webpack -p --progress",
     "start": "zoo node server"
@@ -55,6 +55,7 @@
     "postcss-cssnext": "^2.7.0",
     "postcss-loader": "^0.10.1",
     "postcss-reporter": "^1.4.1",
+    "rimraf": "^2.5.4",
     "style-loader": "^0.13.1",
     "stylelint": "^7.1.0",
     "stylelint-config-standard": "^12.0.0",
