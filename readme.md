@@ -28,6 +28,7 @@ Ensure your editor supports:
 | `npm run lint:css`    | Lint CSS (see `stylelint` in `package.json`).   |
 | `npm run clean`       | Delete `/public/bundle`.                        |
 | `npm run build`       | Compile JS and CSS to `/public/bundle`.         |
+| `npm run build:watch` | Build, rebuilding on source file changes.       |
 | `npm start`           | Start the app server.                           |
 
 ## Browser support

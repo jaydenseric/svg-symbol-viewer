@@ -22,6 +22,7 @@
     "clean": "rimraf public/bundle",
     "prebuild": "npm run clean",
     "build": "zoo webpack -p --progress",
+    "build:watch": "npm run build -- --watch",
     "start": "zoo node server"
   },
   "dependencies": {
