@@ -10,6 +10,6 @@ app.get('*', (request, response) => {
 })
 
 app.listen(process.env.PORT, error => {
-  if (error) return console.log(error)
+  if (error) return console.error(error)
   return console.info(`Serving at localhost on port ${process.env.PORT} in ${process.env.NODE_ENV} mode`)
 })
