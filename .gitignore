@@ -1,5 +1,5 @@
-node_modules/
-/public/bundle/
-.env
-*.log
+node_modules
+npm-debug.log
 .DS_Store
+/public/bundle
+.env
