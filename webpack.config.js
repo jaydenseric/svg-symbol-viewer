@@ -25,10 +25,7 @@ const config = {
     modules: [path.resolve('./src'), 'node_modules']
   },
   plugins: [
-    new webpack.EnvironmentPlugin(['NODE_ENV']),
-    new webpack.ProvidePlugin({
-      'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
-    })
+    new webpack.EnvironmentPlugin(['NODE_ENV'])
   ]
 }
 

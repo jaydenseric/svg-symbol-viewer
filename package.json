@@ -31,8 +31,7 @@
     "radium": "^0.18.1",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
-    "svgxuse": "^1.1.21",
-    "whatwg-fetch": "^1.0.0"
+    "svgxuse": "^1.1.21"
   },
   "devDependencies": {
     "babel-core": "^6.14.0",
@@ -49,9 +48,7 @@
     "eslint-plugin-promise": "^2.0.1",
     "eslint-plugin-react": "^6.2.0",
     "eslint-plugin-standard": "^2.0.0",
-    "exports-loader": "^0.6.3",
     "file-loader": "^0.9.0",
-    "imports-loader": "^0.6.5",
     "rimraf": "^2.5.4",
     "webpack": "^2.1.0-beta.20",
     "zoo": "^0.1.8"
@@ -103,9 +100,6 @@
           }
         }
       ]
-    },
-    "globals": {
-      "fetch": false
     }
   }
 }
