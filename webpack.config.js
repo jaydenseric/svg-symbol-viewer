@@ -16,7 +16,7 @@ const config = {
       exclude: /node_modules/,
       loader: 'babel'
     }, {
-      test: /\.(svg|png|jpg|webm|mp4|woff|woff2)$/,
+      test: /\.svg$/,
       loader: 'file'
     }]
   },
