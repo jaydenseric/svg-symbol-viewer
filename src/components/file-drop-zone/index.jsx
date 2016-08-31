@@ -1,6 +1,7 @@
 import React, {Component, PropTypes} from 'react'
-import styles from './styles.postcss'
+import Radium from 'radium'
 
+@Radium
 export default class FileDropZone extends Component {
   constructor () {
     super()
@@ -40,9 +41,32 @@ export default class FileDropZone extends Component {
 
   render () {
     return (
-      <section className={this.state.dragging ? styles.FileDropZone_hover : styles.FileDropZone} onDragEnter={this.handleDragEnter} onDragOver={this.handleDragOver} onDragLeave={this.handleDragLeave} onDrop={this.handleDrop}>
-        <h1>{this.state.filename ? this.state.filename : this.props.label}</h1>
+      <section style={[styles.base, this.state.dragging ? styles.active : styles.inactive]} onDragEnter={this.handleDragEnter} onDragOver={this.handleDragOver} onDragLeave={this.handleDragLeave} onDrop={this.handleDrop}>
+        <h1 style={styles.heading}>{this.state.filename ? this.state.filename : this.props.label}</h1>
       </section>
     )
+  }
+}
+
+const styles = {
+  'base': {
+    margin: '0 auto',
+    borderSize: '.2em',
+    borderStyle: 'dashed',
+    borderRadius: '.4em',
+    maxWidth: '24em',
+    padding: '2em',
+    textAlign: 'center',
+    transition: '.25s'
+  },
+  'inactive': {
+    borderColor: 'black'
+  },
+  'active': {
+    borderColor: 'white'
+  },
+  'heading': {
+    margin: 0,
+    fontSize: 'inherit'
   }
 }

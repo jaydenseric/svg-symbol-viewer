@@ -1,8 +1,9 @@
 import React, {Component} from 'react'
+import Radium from 'radium'
 import FileDropZone from 'components/file-drop-zone'
 import SymbolList from 'components/symbol-list'
-import styles from './styles.postcss'
 
+@Radium
 export default class Tool extends Component {
   constructor () {
     super()
@@ -28,11 +29,20 @@ export default class Tool extends Component {
 
   render () {
     return (
-      <main className={styles.Tool}>
+      <main style={styles.container}>
         <FileDropZone label="Drop SVG containing symbols" onDrop={this.onDrop} />
-        {this.state.svg !== null && <div className={styles.svg} dangerouslySetInnerHTML={{__html: this.state.svg}} />}
+        {this.state.svg !== null && <div style={styles.svg} dangerouslySetInnerHTML={{__html: this.state.svg}} />}
         {this.state.symbols !== null && <SymbolList symbols={this.state.symbols} />}
       </main>
     )
+  }
+}
+
+const styles = {
+  'container': {
+    display: 'block'
+  },
+  'svg': {
+    display: 'none'
   }
 }

@@ -18,7 +18,6 @@
   "scripts": {
     "lint:js": "eslint . --ext .js --ext .jsx --ignore-pattern public/bundle",
     "lint:js:fix": "npm run lint:js -- --fix",
-    "lint:css": "stylelint '**/*.postcss'",
     "clean": "rimraf public/bundle",
     "prebuild": "npm run clean",
     "build": "zoo webpack -p --progress",
@@ -26,8 +25,10 @@
     "start": "zoo node server"
   },
   "dependencies": {
-    "express": "^4.14.0",
     "babel-polyfill": "^6.13.0",
+    "color": "^0.11.3",
+    "express": "^4.14.0",
+    "radium": "^0.18.1",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
     "svgxuse": "^1.1.20",
@@ -42,7 +43,6 @@
     "babel-preset-react": "^6.11.1",
     "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-0": "^6.5.0",
-    "css-loader": "^0.24.0",
     "eslint": "^3.3.1",
     "eslint-config-standard": "^6.0.0",
     "eslint-config-standard-react": "^3.0.0",
@@ -50,16 +50,9 @@
     "eslint-plugin-react": "^6.1.2",
     "eslint-plugin-standard": "^2.0.0",
     "exports-loader": "^0.6.3",
-    "extract-text-webpack-plugin": "^2.0.0-beta.3",
     "file-loader": "^0.9.0",
     "imports-loader": "^0.6.5",
-    "postcss-cssnext": "^2.7.0",
-    "postcss-loader": "^0.10.1",
-    "postcss-reporter": "^1.4.1",
     "rimraf": "^2.5.4",
-    "style-loader": "^0.13.1",
-    "stylelint": "^7.1.0",
-    "stylelint-config-standard": "^12.0.0",
     "webpack": "^2.1.0-beta.20",
     "zoo": "^0.1.8"
   },
@@ -102,29 +95,6 @@
     },
     "globals": {
       "fetch": false
-    }
-  },
-  "stylelint": {
-    "extends": "stylelint-config-standard",
-    "ignoreFiles": "public/bundle/**",
-    "rules": {
-      "at-rule-empty-line-before": [
-        "always",
-        {
-          "except": [
-            "blockless-after-same-name-blockless",
-            "all-nested"
-          ],
-          "ignore": [
-            "after-comment"
-          ]
-        }
-      ],
-      "font-family-name-quotes": "always-where-recommended",
-      "function-url-quotes": "always",
-      "number-leading-zero": "never",
-      "rule-nested-empty-line-before": "never",
-      "string-quotes": "single"
     }
   }
 }

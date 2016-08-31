@@ -1,8 +1,5 @@
 const path = require('path')
 const webpack = require('webpack')
-const cssnext = require('postcss-cssnext')
-const reporter = require('postcss-reporter')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const config = {
   entry: [
@@ -27,10 +24,6 @@ const config = {
     extensions: ['.js', '.jsx'],
     modules: [path.resolve('./src'), 'node_modules']
   },
-  postcss: [
-    cssnext,
-    reporter({clearMessages: true})
-  ],
   plugins: [
     new webpack.EnvironmentPlugin(['NODE_ENV']),
     new webpack.ProvidePlugin({
@@ -39,22 +32,8 @@ const config = {
   ]
 }
 
-if (process.env.NODE_ENV === 'production') {
-  config.module.loaders.push({
-    test: /\.(css|postcss)$/,
-    loader: ExtractTextPlugin.extract({
-      fallbackLoader: 'style',
-      loader: 'css?-autoprefixer&modules&importLoaders=1!postcss'
-    })
-  })
-  config.plugins.push(
-    new ExtractTextPlugin('bundle.css')
-  )
-} else {
-  config.module.loaders.push({
-    test: /\.(css|postcss)$/,
-    loader: 'style!css?-autoprefixer&modules&importLoaders=1!postcss'
-  })
+if (process.env.NODE_ENV !== 'production') {
+  config.devtool = 'source-map'
   config.plugins.push(
     new webpack.NoErrorsPlugin()
   )
