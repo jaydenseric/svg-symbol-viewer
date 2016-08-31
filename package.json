@@ -16,7 +16,7 @@
   },
   "private": true,
   "scripts": {
-    "lint:js": "eslint . --ext .js --ext .jsx --ignore-pattern public/bundle",
+    "lint:js": "eslint . --ext .js --ext .jsx",
     "lint:js:fix": "npm run lint:js -- --fix",
     "clean": "rimraf public/bundle",
     "prebuild": "npm run clean",
