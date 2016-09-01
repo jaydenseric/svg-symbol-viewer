@@ -15,9 +15,7 @@ For development tools and building:
 Ensure your editor supports:
 
 - [EditorConfig](http://editorconfig.org).
-- Live linting, respecting `package.json` config.
-  - [ESLint](http://eslint.org) for JS. Atom users install [linter-eslint](https://atom.io/packages/linter-eslint) and optionally [standard-formatter](https://atom.io/packages/standard-formatter).
-  - [stylelint](http://stylelint.io) for CSS. Atom users install [linter-stylelint](https://atom.io/packages/linter-stylelint).
+- [ESLint](http://eslint.org), respecting `package.json` config. Atom users install [linter-eslint](https://atom.io/packages/linter-eslint).
 
 ## Scripts
 
@@ -25,9 +23,8 @@ Ensure your editor supports:
 |:----------------------|:------------------------------------------------|
 | `npm run lint:js`     | Lint JS (see `eslintConfig` in `package.json`). |
 | `npm run lint:js:fix` | Lint JS and automatically fix issues.           |
-| `npm run lint:css`    | Lint CSS (see `stylelint` in `package.json`).   |
 | `npm run clean`       | Delete `/public/bundle`.                        |
-| `npm run build`       | Compile JS and CSS to `/public/bundle`.         |
+| `npm run build`       | Compile JS to `/public/bundle`.                 |
 | `npm run build:watch` | Build, rebuilding on source file changes.       |
 | `npm start`           | Start the app server.                           |
 
