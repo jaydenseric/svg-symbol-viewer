@@ -12,7 +12,10 @@ const config = {
     loaders: [{
       test: /\.(js|jsx)$/,
       exclude: /node_modules/,
-      loader: 'babel'
+      loader: 'babel',
+      query: {
+        cacheDirectory: true
+      }
     }, {
       test: /\.svg$/,
       loader: 'file'
