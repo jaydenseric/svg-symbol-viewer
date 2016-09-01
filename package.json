@@ -26,7 +26,6 @@
   },
   "dependencies": {
     "babel-runtime": "^6.11.6",
-    "color": "^0.11.3",
     "express": "^4.14.0",
     "radium": "^0.18.1",
     "react": "^15.3.1",

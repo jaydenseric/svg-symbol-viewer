@@ -1,6 +1,5 @@
 import React, {PropTypes, Component} from 'react'
 import Radium, {keyframes} from 'radium'
-import Color from 'color'
 
 @Radium
 export default class SymbolList extends Component {
@@ -63,7 +62,7 @@ const styles = {
     backgroundImage: `${gradient}, ${gradient}`,
     backgroundSize: `${gridSize * 2}px ${gridSize * 2}px`,
     backgroundPosition: `0 0, ${gridSize}px ${gridSize}px`,
-    boxShadow: `0 .1em .4em ${Color('black').alpha(0.2).rgbString()}`
+    boxShadow: `0 .1em .4em rgba(0, 0, 0, .2)`
   },
   'figcaption': {
     marginTop: '.5em'

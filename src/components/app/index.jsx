@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import Radium, {StyleRoot, Style} from 'radium'
-import Color from 'color'
 import Header from 'components/header'
 import Tool from 'components/tool'
 
@@ -32,7 +31,7 @@ const styles = {
     backgroundColor: '#7d0bff'
   },
   '::selection': {
-    backgroundColor: Color('springgreen').alpha(0.8).rgbString(),
+    backgroundColor: 'rgba(0, 255, 127, .8)',
     opacity: 0
   }
 }
