@@ -30,7 +30,7 @@ export default class Tool extends Component {
   render () {
     return (
       <main style={styles.container}>
-        <FileDropZone label="Drop SVG containing symbols" onDrop={this.onDrop} />
+        <FileDropZone label='Drop SVG containing symbols' onDrop={this.onDrop} />
         {this.state.svg !== null && <div style={styles.svg} dangerouslySetInnerHTML={{__html: this.state.svg}} />}
         {this.state.symbols !== null && <SymbolList symbols={this.state.symbols} />}
       </main>

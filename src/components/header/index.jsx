@@ -7,7 +7,7 @@ export default class Header extends Component {
   render () {
     return (
       <header style={styles.container}>
-        <img style={styles.logo} src={logo} alt="SVG symbol viewer logo" />
+        <img style={styles.logo} src={logo} alt='SVG symbol viewer logo' />
         <h1 style={styles.heading}>SVG symbol viewer</h1>
       </header>
     )
