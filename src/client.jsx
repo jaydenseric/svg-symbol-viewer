@@ -1,4 +1,3 @@
-import 'babel-polyfill'
 import 'svgxuse'
 import React from 'react'
 import {render} from 'react-dom'
