@@ -20,7 +20,7 @@
     "lint:js:fix": "npm run lint:js -- --fix",
     "clean": "rimraf public/bundle",
     "prebuild": "npm run clean",
-    "build": "zoo webpack -p --progress",
+    "build": "zoo webpack --progress",
     "build:watch": "npm run build -- --watch",
     "start": "zoo node server"
   },

@@ -2,9 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 
 const config = {
-  entry: [
-    './src/client.jsx'
-  ],
+  entry: './src/client.jsx',
   output: {
     path: path.resolve('./public/bundle'),
     publicPath: '/bundle/',
@@ -29,11 +27,15 @@ const config = {
   ]
 }
 
-if (process.env.NODE_ENV !== 'production') {
-  config.devtool = 'source-map'
+if (process.env.NODE_ENV === 'production') {
   config.plugins.push(
-    new webpack.NoErrorsPlugin()
+    new webpack.optimize.UglifyJsPlugin({
+      comments: false
+    })
   )
+} else {
+  config.devtool = 'eval'
+  config.plugins.push(new webpack.NoErrorsPlugin())
 }
 
 module.exports = config
