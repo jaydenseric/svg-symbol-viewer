@@ -1,4 +1,4 @@
-import React, {Component } from 'react'
+import React, {Component} from 'react'
 import Radium from 'radium'
 import logo from './svg-symbol-viewer-logo.svg'
 
@@ -16,7 +16,7 @@ export default class Header extends Component {
 
 const styles = {
   container: {
-    padding: '1.5em 0',
+    margin: '1.5em auto',
     textAlign: 'center',
     fontSize: '150%',
     '@media (min-width: 30em)': {

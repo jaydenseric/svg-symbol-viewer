@@ -50,7 +50,7 @@ export default class FileDropZone extends Component {
 
 const styles = {
   'base': {
-    margin: '0 auto',
+    margin: '2em auto',
     borderSize: '.2em',
     borderStyle: 'dashed',
     borderRadius: '.4em',

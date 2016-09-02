@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import Radium, {StyleRoot, Style} from 'radium'
 import Header from 'components/header'
 import Tool from 'components/tool'
+import GithubLinks from 'components/github-links'
 
 @Radium
 export default class App extends Component {
@@ -11,6 +12,7 @@ export default class App extends Component {
         <Style rules={styles} />
         <Header />
         <Tool />
+        <GithubLinks author='jaydenseric' project='svg-symbol-viewer' />
       </StyleRoot>
     )
   }
@@ -24,7 +26,8 @@ const styles = {
     WebkitTapHighlightColor: 'transparent'
   },
   body: {
-    margin: '3em 1.5em',
+    margin: 0,
+    padding: '3em 1.5em',
     lineHeight: 1,
     fontFamily: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif',
     color: 'white',
