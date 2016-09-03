@@ -2,17 +2,15 @@
   <title>SVG symbol viewer logo</title>
   <g stroke="#000">
     <circle fill="none" stroke-width="5" cx="42.5" cy="42.5" r="40"/>
-    <g fill="#000">
-      <circle cx="42.5" cy="16.34" r="6"/>
-      <circle cx="61" cy="24" r="6"/>
-      <circle cx="68.66" cy="42.5" r="6"/>
-      <circle cx="61" cy="61" r="6"/>
-      <circle cx="42.5" cy="68.66" r="6"/>
-      <circle cx="24" cy="61" r="6"/>
-      <circle cx="16.34" cy="42.5" r="6"/>
-      <circle cx="24" cy="24" r="6"/>
-      <path stroke-width="8" d="M42.5 68.663V17.751M16.337 42.5h50.912M24 24l36 36M24 61l36-36"/>
-      <path stroke-width="14" d="M70 70l25 25"/>
-    </g>
+    <circle cx="42.5" cy="17.34" r="6"/>
+    <circle cx="60" cy="25" r="6"/>
+    <circle cx="67.66" cy="42.5" r="6"/>
+    <circle cx="60" cy="60" r="6"/>
+    <circle cx="42.5" cy="67.66" r="6"/>
+    <circle cx="25" cy="60" r="6"/>
+    <circle cx="17.34" cy="42.5" r="6"/>
+    <circle cx="25" cy="25" r="6"/>
+    <path stroke-width="8" d="M42.5 68.663V17.751M16.337 42.5h50.912M24 24l36 36m-36 1l36-36"/>
+    <path stroke-width="14" d="M70 70l25 25"/>
   </g>
 </svg>
