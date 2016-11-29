@@ -2,7 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 
 const config = {
-  entry: './src/client.jsx',
+  entry: './src/client',
   output: {
     path: path.resolve(__dirname, 'public/bundle'),
     publicPath: '/bundle/',
@@ -11,7 +11,7 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         use: 'babel-loader',
         options: {
@@ -28,8 +28,7 @@ const config = {
     modules: [
       'node_modules',
       path.resolve(__dirname, 'src')
-    ],
-    extensions: ['.js', '.jsx']
+    ]
   },
   plugins: [
     new webpack.EnvironmentPlugin(['NODE_ENV'])
