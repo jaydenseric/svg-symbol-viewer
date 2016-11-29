@@ -4,26 +4,32 @@ const webpack = require('webpack')
 const config = {
   entry: './src/client.jsx',
   output: {
-    path: path.resolve('./public/bundle'),
+    path: path.resolve(__dirname, 'public/bundle'),
     publicPath: '/bundle/',
     filename: 'bundle.js'
   },
   module: {
-    loaders: [{
-      test: /\.(js|jsx)$/,
-      exclude: /node_modules/,
-      loader: 'babel',
-      query: {
-        cacheDirectory: true
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: 'babel-loader',
+        options: {
+          cacheDirectory: true
+        }
+      },
+      {
+        test: /\.svg$/,
+        use: 'file-loader'
       }
-    }, {
-      test: /\.svg$/,
-      loader: 'file'
-    }]
+    ]
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
-    modules: [path.resolve('./src'), 'node_modules']
+    modules: [
+      'node_modules',
+      path.resolve(__dirname, 'src')
+    ],
+    extensions: ['.js', '.jsx']
   },
   plugins: [
     new webpack.EnvironmentPlugin(['NODE_ENV'])
