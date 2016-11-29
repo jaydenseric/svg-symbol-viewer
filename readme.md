@@ -14,7 +14,7 @@ For development tools and building:
 
 Ensure your editor supports:
 
-- [EditorConfig](http://editorconfig.org).
+- [EditorConfig](http://editorconfig.org). Atom users install [editorconfig](https://atom.io/packages/editorconfig).
 - [ESLint](http://eslint.org), respecting `package.json` config. Atom users install [linter-eslint](https://atom.io/packages/linter-eslint).
 
 ## Scripts
