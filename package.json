@@ -1,19 +1,4 @@
 {
-  "name": "svg-symbol-viewer",
-  "description": "A simple drag-and-drop SVG symbol viewer web app.",
-  "author": {
-    "name": "Jayden Seric",
-    "email": "me@jaydenseric.com",
-    "url": "http://jaydenseric.com"
-  },
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jaydenseric/svg-symbol-viewer"
-  },
-  "bugs": {
-    "url": "https://github.com/jaydenseric/svg-symbol-viewer/issues"
-  },
   "private": true,
   "scripts": {
     "lint:js": "eslint . --ext .js --ext .jsx",
