@@ -78,6 +78,10 @@
         }
       ],
       "no-new": 1,
+      "quote-props": [
+        2,
+        "as-needed"
+      ],
       "valid-jsdoc": [
         2,
         {

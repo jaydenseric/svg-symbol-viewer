@@ -39,10 +39,10 @@ export default class Tool extends Component {
 }
 
 const styles = {
-  'container': {
+  container: {
     display: 'block'
   },
-  'svg': {
+  svg: {
     display: 'none'
   }
 }

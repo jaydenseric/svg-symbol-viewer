@@ -49,7 +49,7 @@ export default class FileDropZone extends Component {
 }
 
 const styles = {
-  'base': {
+  base: {
     margin: '2em auto',
     borderSize: '.2em',
     borderStyle: 'dashed',
@@ -59,13 +59,13 @@ const styles = {
     textAlign: 'center',
     transition: '.25s'
   },
-  'inactive': {
+  inactive: {
     borderColor: 'black'
   },
-  'active': {
+  active: {
     borderColor: 'white'
   },
-  'heading': {
+  heading: {
     margin: 0,
     fontSize: 'inherit'
   }
