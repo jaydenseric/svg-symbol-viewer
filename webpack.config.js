@@ -37,13 +37,15 @@ const config = {
 }
 
 if (process.env.NODE_ENV === 'production') {
+  config.devtool = 'source-map'
   config.plugins.push(
     new webpack.optimize.UglifyJsPlugin({
-      comments: false
+      comments: false,
+      sourceMap: true
     })
   )
 } else {
-  config.devtool = 'eval'
+  config.devtool = 'cheap-module-source-map'
   config.plugins.push(new webpack.NoErrorsPlugin())
 }
 
