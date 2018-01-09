@@ -13,14 +13,14 @@ const config = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: 'babel-loader',
+        loader: 'babel-loader',
         options: {
           cacheDirectory: true
         }
       },
       {
         test: /\.svg$/,
-        use: 'file-loader'
+        loader: 'file-loader'
       }
     ]
   },
