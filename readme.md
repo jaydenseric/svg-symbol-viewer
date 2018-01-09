@@ -1,6 +1,6 @@
 # SVG symbol viewer
 
-A simple drag-and-drop SVG symbol viewer web app: [svgsymbolviewer.io](http://svgsymbolviewer.io).
+A simple drag-and-drop SVG symbol viewer web app: [svgsymbolviewer.io](https://svgsymbolviewer.io).
 
 ## Setup
 
