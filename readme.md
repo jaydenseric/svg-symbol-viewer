@@ -1,22 +1,17 @@
 # SVG symbol viewer
 
-A simple drag-and-drop SVG symbol viewer web app: [svgsymbolviewer.io](https://svgsymbolviewer.io).
+An online, no-upload drag-and-drop SVG file symbol extractor and viewer: [svgsymbolviewer.io](https://svgsymbolviewer.io).
 
 ## Setup
 
-For development tools and building:
+1.  Install the latest [Node.js](https://nodejs.org) and [npm](https://npmjs.com).
+2.  Duplicate `.env.example` as `.env` and configure.
+3.  Run `npm install` in the project directory with Terminal.
+4.  Run `npm run dev` for development, or `npm run build && npm start` for production.
 
-1. Install the latest [Node.js and NPM](https://nodejs.org).
-2. Run `npm install` within the project root directory in Terminal.
-3. Copy `.env.example`, rename it `.env` and customize.
-4. If the environment is `production`, run `npm run build`.
-5. Start the app server with `npm start`.
+Your editor must support:
 
-Ensure your editor supports:
-
-* [EditorConfig](http://editorconfig.org). Atom users install [editorconfig](https://atom.io/packages/editorconfig).
-* [ESLint](http://eslint.org), respecting `package.json` config. Atom users install [linter-eslint](https://atom.io/packages/linter-eslint).
-
-## Browser support
-
-IE 11 and modern browser support.
+- [EditorConfig](https://editorconfig.org)
+- [ESLint](https://eslint.org)
+  - [Visual Studio Code](https://code.visualstudio.com): [`vscode-eslint`](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+  - [Atom](https://atom.io): [`linter-eslint`](https://atom.io/packages/linter-eslint)

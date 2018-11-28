@@ -1,0 +1,15 @@
+{
+  "name": "SVG symbol viewer",
+  "short_name": "Viewer",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#7d0bff",
+  "background_color": "#7d0bff",
+  "icons": [
+    {
+      "src": "launcher-icon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

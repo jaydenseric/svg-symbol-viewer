@@ -1,109 +1,68 @@
 {
   "name": "svg-symbol-viewer",
   "private": true,
-  "scripts": {
-    "lint:js": "eslint .",
-    "lint:js:fix": "npm run lint:js -- --fix",
-    "clean": "rimraf public/bundle",
-    "prebuild": "npm run clean",
-    "build": "zoo webpack --progress",
-    "build:watch": "npm run build -- --watch",
-    "start": "zoo node server",
-    "deploy": "npm run deploy:up && npm run deploy:alias && npm run deploy:prune",
-    "deploy:up": "now --debug",
-    "deploy:alias": "now alias --debug",
-    "deploy:prune": "now remove svg-symbol-viewer --safe --debug"
+  "author": {
+    "name": "Jayden Seric",
+    "email": "me@jaydenseric.com",
+    "url": "https://jaydenseric.com"
   },
+  "engines": {
+    "node": ">=8.6"
+  },
+  "browserslist": "> 0.5%, not dead, node 8.6",
   "dependencies": {
-    "babel-core": "^6.18.2",
-    "babel-loader": "^6.2.8",
-    "babel-plugin-transform-decorators-legacy": "^1.3.4",
-    "babel-plugin-transform-runtime": "^6.15.0",
-    "babel-preset-es2015": "^6.18.0",
-    "babel-preset-react": "^6.16.0",
-    "babel-preset-react-hmre": "^1.1.1",
-    "babel-preset-stage-0": "^6.16.0",
-    "babel-runtime": "^6.18.0",
-    "compression": "^1.6.2",
-    "express": "^4.14.0",
-    "file-loader": "^0.9.0",
-    "radium": "^0.18.1",
-    "react": "^15.4.1",
-    "react-dom": "^15.4.1",
-    "rimraf": "^2.5.4",
-    "svgxuse": "^1.1.23",
-    "webpack": "^2.1.0-beta.20",
-    "zoo": "^0.1.9"
+    "babel-plugin-transform-inline-environment-variables": "^0.4.3",
+    "dotenv-cli": "^1.4.0",
+    "next": "^7.0.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
   },
   "devDependencies": {
-    "babel-eslint": "^7.1.1",
-    "eslint": "^3.11.1",
-    "eslint-config-standard": "^6.2.1",
-    "eslint-config-standard-react": "^4.2.0",
-    "eslint-plugin-promise": "^3.4.0",
-    "eslint-plugin-react": "^6.7.1",
-    "eslint-plugin-standard": "^2.0.1",
-    "now": "^9.0.1"
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.9.0",
+    "eslint-config-env": "^2.0.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-import-order-alphabetical": "0.0.1",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.0",
+    "prettier": "^1.15.2"
+  },
+  "scripts": {
+    "dev": "dotenv next",
+    "build": "dotenv next build",
+    "start": "dotenv next start",
+    "test": "eslint . && prettier '**/*.{json,yml,md}' -l"
+  },
+  "eslintConfig": {
+    "extends": [
+      "env"
+    ],
+    "rules": {
+      "require-jsdoc": "off"
+    }
+  },
+  "prettier": {
+    "proseWrap": "never",
+    "singleQuote": true,
+    "semi": false
   },
   "babel": {
     "presets": [
-      [
-        "es2015",
-        {
-          "modules": false,
-          "loose": true
-        }
-      ],
-      "stage-0",
-      "react"
+      "next/babel"
     ],
     "plugins": [
-      "transform-runtime",
-      "transform-decorators-legacy"
+      "transform-inline-environment-variables"
     ]
-  },
-  "eslintConfig": {
-    "parser": "babel-eslint",
-    "extends": [
-      "standard",
-      "standard-react"
-    ],
-    "rules": {
-      "arrow-parens": [
-        2,
-        "as-needed"
-      ],
-      "no-console": [
-        2,
-        {
-          "allow": [
-            "info",
-            "warn",
-            "error"
-          ]
-        }
-      ],
-      "no-new": 1,
-      "quote-props": [
-        2,
-        "as-needed"
-      ],
-      "valid-jsdoc": [
-        2,
-        {
-          "requireReturn": false,
-          "prefer": {
-            "return": "returns"
-          }
-        }
-      ]
-    }
   },
   "now": {
     "alias": "svgsymbolviewer.io",
     "env": {
       "NODE_ENV": "production",
-      "PORT": 80
+      "DOMAIN": "svgsymbolviewer.io",
+      "PORT": "80",
+      "GA_TRACKING_ID": "UA-83641101-1"
     }
   }
 }
