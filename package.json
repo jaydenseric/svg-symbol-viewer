@@ -33,7 +33,8 @@
     "dev": "dotenv next",
     "build": "dotenv next build",
     "start": "dotenv next start",
-    "test": "eslint . && prettier '**/*.{json,yml,md}' -l"
+    "test": "eslint . && prettier '**/*.{json,yml,md}' -l",
+    "deploy": "now && now alias && now rm svg-symbol-viewer -s"
   },
   "eslintConfig": {
     "extends": [
