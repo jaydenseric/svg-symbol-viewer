@@ -1,5 +1,7 @@
 # SVG symbol viewer
 
+[![Build status](https://travis-ci.org/jaydenseric/svg-symbol-viewer.svg?branch=master)](https://travis-ci.org/jaydenseric/svg-symbol-viewer)
+
 An online, no-upload drag-and-drop SVG file symbol extractor and viewer: [svgsymbolviewer.io](https://svgsymbolviewer.io).
 
 ## Setup
