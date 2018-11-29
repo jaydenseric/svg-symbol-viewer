@@ -32,7 +32,8 @@
   "scripts": {
     "dev": "dotenv next",
     "build": "dotenv next build",
-    "start": "dotenv next start",
+    "start": "dotenv npm run start:next",
+    "start:next": "next start -p $PORT",
     "test": "eslint . && prettier '**/*.{json,yml,md}' -l",
     "deploy": "now && now alias && now rm svg-symbol-viewer -s"
   },
