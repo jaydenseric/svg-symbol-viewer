@@ -1,0 +1,9 @@
+{
+  "alias": "svgsymbolviewer.io",
+  "env": {
+    "NODE_ENV": "production",
+    "DOMAIN": "svgsymbolviewer.io",
+    "PORT": "80",
+    "GA_TRACKING_ID": "UA-83641101-1"
+  }
+}
