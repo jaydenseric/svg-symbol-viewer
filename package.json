@@ -9,7 +9,7 @@
   "engines": {
     "node": ">=8.6"
   },
-  "browserslist": "> 0.5%, not dead, node 8.6",
+  "browserslist": "> 0.5%, not dead, node >= 8.6",
   "dependencies": {
     "babel-plugin-transform-inline-environment-variables": "^0.4.3",
     "dotenv-cli": "^2.0.0",
