@@ -1,10 +1,13 @@
 {
-  "version": 1,
-  "alias": "svgsymbolviewer.io",
-  "env": {
-    "NODE_ENV": "production",
-    "DOMAIN": "svgsymbolviewer.io",
-    "PORT": "80",
-    "GA_TRACKING_ID": "UA-83641101-1"
+  "version": 2,
+  "scope": "jaydenseric",
+  "alias": ["svgsymbolviewer.io"],
+  "build": {
+    "env": {
+      "PROTOCOL": "https",
+      "HOST": "svgsymbolviewer.io",
+      "PORT": "80",
+      "GA_TRACKING_ID": "UA-83641101-1"
+    }
   }
 }

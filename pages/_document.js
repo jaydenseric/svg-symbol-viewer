@@ -1,10 +1,9 @@
-import Document, { Head, Main, NextScript } from 'next/document'
-import { LOCALE } from '../config'
+import Document, { Head, Html, Main, NextScript } from 'next/document'
 
 export default class extends Document {
   render() {
     return (
-      <html lang={LOCALE}>
+      <Html lang="en-US">
         <Head />
         <body>
           <Main />
@@ -20,7 +19,7 @@ export default class extends Document {
             </>
           )}
         </body>
-      </html>
+      </Html>
     )
   }
 }

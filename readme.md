@@ -7,9 +7,9 @@ An online, no-upload drag-and-drop SVG file symbol extractor and viewer: [svgsym
 ## Setup
 
 1.  Install the latest [Node.js](https://nodejs.org) and [npm](https://npmjs.com).
-2.  Duplicate `.env.example` as `.env` and configure.
+2.  Duplicate `.env.build.example` as `.env.build` and configure.
 3.  Run `npm install` in the project directory with Terminal.
-4.  Run `npm run dev` for development, or `npm run build && npm start` for production.
+4.  Run `npm run now:dev -- -l 3000` (`3000` should match the `PORT` in `.env.build`) for development.
 
 Your editor must support:
 

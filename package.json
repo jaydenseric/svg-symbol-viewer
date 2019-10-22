@@ -11,33 +11,34 @@
   },
   "browserslist": "> 0.5%, not dead, node >= 8.6",
   "dependencies": {
-    "babel-plugin-transform-inline-environment-variables": "^0.4.3",
-    "dotenv-cli": "^2.0.1",
-    "next": "^9.0.3",
+    "next": "^9.1.1",
     "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.2",
-    "eslint": "^6.1.0",
-    "eslint-config-env": "^9.0.0",
-    "eslint-config-prettier": "^6.0.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.5.1",
+    "eslint-config-env": "^10.0.0",
+    "eslint-config-prettier": "^6.4.0",
     "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-import-order-alphabetical": "^0.0.2",
-    "eslint-plugin-jsdoc": "^15.8.0",
-    "eslint-plugin-node": "^9.1.0",
-    "eslint-plugin-prettier": "^3.1.0",
-    "eslint-plugin-react": "^7.14.3",
-    "eslint-plugin-react-hooks": "^1.6.1",
+    "eslint-plugin-import-order-alphabetical": "^1.0.0",
+    "eslint-plugin-jsdoc": "^15.12.0",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^2.1.2",
+    "now": "^16.4.0",
     "prettier": "^1.18.2"
   },
   "scripts": {
-    "dev": "dotenv next",
-    "build": "dotenv next build",
-    "start": "dotenv npm run start:next",
-    "start:next": "next start -p $PORT",
-    "test": "eslint . && prettier '**/*.{json,yml,md}' -l",
-    "deploy": "now && now alias && now rm svg-symbol-viewer -s"
+    "test": "npm run test:eslint && npm run test:prettier",
+    "test:eslint": "eslint .",
+    "test:prettier": "prettier '**/*.{json,yml,md}' -l",
+    "build": "next build",
+    "start": "next start",
+    "dev": "next -p $PORT",
+    "now:dev": "now dev",
+    "now:deploy": "now --prod"
   }
 }

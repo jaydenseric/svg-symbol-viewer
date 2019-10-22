@@ -6,10 +6,7 @@ const Page = ({ title, description, children }) => (
     <Head>
       {title && <title>{title}</title>}
       {description && <meta name="description" content={description} />}
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1, shrink-to-fit=no"
-      />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="format-detection" content="telephone=no" />
       <meta name="theme-color" content="#7d0bff" />
       <meta name="twitter:card" content="summary" />
@@ -17,15 +14,14 @@ const Page = ({ title, description, children }) => (
       <meta name="twitter:creator" content="@jaydenseric" />
       {title && <meta property="og:title" content={`${title}`} />}
       {description && <meta property="og:description" content={description} />}
-      {process.env.NODE_ENV === 'production' && (
-        <meta
-          property="og:image"
-          content={`https://${process.env.DOMAIN}/static/thumbnail.png`}
-        />
-      )}
+      <meta
+        property="og:image"
+        content={`${process.env.PROTOCOL}://${process.env.HOST}${
+          process.env.PORT === '80' ? '' : `:${process.env.PORT}`
+        }/static/thumbnail.png`}
+      />
       <link rel="icon" sizes="192x192" href="/static/icon.png" />
-      <link rel="apple-touch-icon" href="/static/launcher-icon.png" />
-      <link rel="manifest" href="/static/manifest.webmanifest" />
+      <link rel="manifest" href="/manifest.webmanifest" />
     </Head>
     {children}
     <style jsx global>{`
