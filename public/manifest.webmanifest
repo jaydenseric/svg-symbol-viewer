@@ -2,7 +2,7 @@
   "name": "SVG symbol viewer",
   "short_name": "Viewer",
   "start_url": "/",
-  "display": "standalone",
+  "display": "minimal-ui",
   "theme_color": "#7d0bff",
   "background_color": "#7d0bff",
   "icons": [
