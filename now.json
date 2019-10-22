@@ -1,6 +1,7 @@
 {
   "version": 2,
   "scope": "jaydenseric",
+  "name": "svg-symbol-viewer",
   "alias": ["svgsymbolviewer.io"],
   "build": {
     "env": {
