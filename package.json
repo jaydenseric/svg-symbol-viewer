@@ -7,9 +7,9 @@
     "url": "https://jaydenseric.com"
   },
   "engines": {
-    "node": ">=8.6"
+    "node": ">=12"
   },
-  "browserslist": "> 0.5%, not dead, node >= 8.6",
+  "browserslist": "Node >= 12, > 0.5%, not dead",
   "dependencies": {
     "next": "^9.1.1",
     "prop-types": "^15.7.2",
