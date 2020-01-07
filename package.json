@@ -6,6 +6,9 @@
     "email": "me@jaydenseric.com",
     "url": "https://jaydenseric.com"
   },
+  "repository": "github:jaydenseric/svg-symbol-viewer",
+  "homepage": "https://github.com/jaydenseric/svg-symbol-viewer#readme",
+  "bugs": "https://github.com/jaydenseric/svg-symbol-viewer/issues",
   "funding": "https://github.com/sponsors/jaydenseric",
   "engines": {
     "node": ">=12"
