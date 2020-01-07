@@ -6,6 +6,7 @@
     "email": "me@jaydenseric.com",
     "url": "https://jaydenseric.com"
   },
+  "funding": "https://github.com/sponsors/jaydenseric",
   "engines": {
     "node": ">=12"
   },
