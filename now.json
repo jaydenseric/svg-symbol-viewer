@@ -1,8 +1,7 @@
 {
   "version": 2,
   "scope": "jaydenseric",
-  "name": "svg-symbol-viewer",
-  "alias": ["svgsymbolviewer.io"],
+  "trailingSlash": false,
   "build": {
     "env": {
       "PROTOCOL": "https",
