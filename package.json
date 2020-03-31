@@ -15,7 +15,7 @@
   },
   "browserslist": "Node >= 12, > 0.5%, not dead",
   "dependencies": {
-    "next": "^9.1.7",
+    "next": "^9.3.2",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
