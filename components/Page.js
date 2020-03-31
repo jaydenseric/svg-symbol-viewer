@@ -52,7 +52,7 @@ const Page = ({ title, description, children }) => (
 Page.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
-  children: PropTypes.node
+  children: PropTypes.node,
 }
 
 export default Page

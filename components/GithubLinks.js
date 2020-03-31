@@ -47,7 +47,7 @@ const GithubLinks = ({ author, project }) => (
 
 GithubLinks.propTypes = {
   author: PropTypes.string.isRequired,
-  project: PropTypes.string.isRequired
+  project: PropTypes.string.isRequired,
 }
 
 export default GithubLinks

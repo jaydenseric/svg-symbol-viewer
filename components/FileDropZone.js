@@ -4,11 +4,11 @@ import { Component } from 'react'
 export default class FileDropZone extends Component {
   static propTypes = {
     label: PropTypes.string.isRequired,
-    onDrop: PropTypes.func
+    onDrop: PropTypes.func,
   }
 
   state = {
-    dragging: false
+    dragging: false,
   }
 
   handleDragEnter = () => {
@@ -23,7 +23,7 @@ export default class FileDropZone extends Component {
     this.setState({ dragging: false })
   }
 
-  handleDrop = event => {
+  handleDrop = (event) => {
     event.preventDefault()
 
     this.setState({ dragging: false })

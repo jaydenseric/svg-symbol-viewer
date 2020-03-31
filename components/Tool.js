@@ -6,22 +6,22 @@ import SymbolList from './SymbolList'
 export default class Tool extends Component {
   state = {
     svg: null,
-    symbols: null
+    symbols: null,
   }
 
-  onDrop = event => {
+  onDrop = (event) => {
     const reader = new window.FileReader()
 
     reader.onload = () => {
       const parser = new window.DOMParser()
       const doc = parser.parseFromString(reader.result, 'image/svg+xml')
       const idList = Array.from(doc.querySelectorAll('symbol[id]')).map(
-        element => element.id
+        (element) => element.id
       )
 
       this.setState({
         svg: reader.result,
-        symbols: idList
+        symbols: idList,
       })
     }
 

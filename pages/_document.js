@@ -12,7 +12,7 @@ export default class extends Document {
             <>
               <script
                 dangerouslySetInnerHTML={{
-                  __html: `window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create', '${process.env.GA_TRACKING_ID}', 'auto');ga('send', 'pageview')`
+                  __html: `window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create', '${process.env.GA_TRACKING_ID}', 'auto');ga('send', 'pageview')`,
                 }}
               />
               <script async src="https://google-analytics.com/analytics.js" />

@@ -32,12 +32,12 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^3.0.0",
     "now": "^16.7.3",
-    "prettier": "^1.19.1"
+    "prettier": "^2.0.2"
   },
   "scripts": {
     "test": "npm run test:eslint && npm run test:prettier",
     "test:eslint": "eslint .",
-    "test:prettier": "prettier '**/*.{json,yml,md}' -l",
+    "test:prettier": "prettier -c .",
     "build": "next build",
     "start": "next start",
     "dev": "next -p $PORT",

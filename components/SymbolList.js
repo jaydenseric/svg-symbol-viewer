@@ -7,7 +7,7 @@ const GRADIENT = `linear-gradient(45deg, ${GRID_COLOR} 25%, transparent 25%, tra
 
 export default class SymbolList extends Component {
   static propTypes = {
-    symbols: PropTypes.array.isRequired
+    symbols: PropTypes.array.isRequired,
   }
 
   render() {
