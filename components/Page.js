@@ -1,5 +1,5 @@
-import Head from 'next/head'
-import PropTypes from 'prop-types'
+import Head from 'next/head';
+import PropTypes from 'prop-types';
 
 const Page = ({ title, description, children }) => (
   <>
@@ -45,12 +45,12 @@ const Page = ({ title, description, children }) => (
       }
     `}</style>
   </>
-)
+);
 
 Page.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
   children: PropTypes.node,
-}
+};
 
-export default Page
+export default Page;

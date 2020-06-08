@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 const GithubLinks = ({ author, project }) => (
   <section>
@@ -43,11 +43,11 @@ const GithubLinks = ({ author, project }) => (
       }
     `}</style>
   </section>
-)
+);
 
 GithubLinks.propTypes = {
   author: PropTypes.string.isRequired,
   project: PropTypes.string.isRequired,
-}
+};
 
-export default GithubLinks
+export default GithubLinks;

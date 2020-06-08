@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 const Section = ({ children }) => (
   <section>
@@ -11,10 +11,10 @@ const Section = ({ children }) => (
       }
     `}</style>
   </section>
-)
+);
 
 Section.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Section
+export default Section;

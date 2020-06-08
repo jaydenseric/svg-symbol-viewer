@@ -1,14 +1,14 @@
-import PropTypes from 'prop-types'
-import { Component } from 'react'
+import PropTypes from 'prop-types';
+import { Component } from 'react';
 
-const GRID_SIZE = 8
-const GRID_COLOR = '#ccc'
-const GRADIENT = `linear-gradient(45deg, ${GRID_COLOR} 25%, transparent 25%, transparent 75%, ${GRID_COLOR} 75%, ${GRID_COLOR} 100%)`
+const GRID_SIZE = 8;
+const GRID_COLOR = '#ccc';
+const GRADIENT = `linear-gradient(45deg, ${GRID_COLOR} 25%, transparent 25%, transparent 75%, ${GRID_COLOR} 75%, ${GRID_COLOR} 100%)`;
 
 export default class SymbolList extends Component {
   static propTypes = {
     symbols: PropTypes.array.isRequired,
-  }
+  };
 
   render() {
     return (
@@ -65,6 +65,6 @@ export default class SymbolList extends Component {
           }
         `}</style>
       </ol>
-    )
+    );
   }
 }

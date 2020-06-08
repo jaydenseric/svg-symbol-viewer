@@ -1,43 +1,43 @@
-import PropTypes from 'prop-types'
-import { Component } from 'react'
+import PropTypes from 'prop-types';
+import { Component } from 'react';
 
 export default class FileDropZone extends Component {
   static propTypes = {
     label: PropTypes.string.isRequired,
     onDrop: PropTypes.func,
-  }
+  };
 
   state = {
     dragging: false,
-  }
+  };
 
   handleDragEnter = () => {
-    this.setState({ dragging: true })
-  }
+    this.setState({ dragging: true });
+  };
 
   handleDragOver = () => {
-    event.preventDefault()
-  }
+    event.preventDefault();
+  };
 
   handleDragLeave = () => {
-    this.setState({ dragging: false })
-  }
+    this.setState({ dragging: false });
+  };
 
   handleDrop = (event) => {
-    event.preventDefault()
+    event.preventDefault();
 
-    this.setState({ dragging: false })
+    this.setState({ dragging: false });
 
     if (event.dataTransfer.files.length > 0) {
-      const [file] = event.dataTransfer.files
+      const [file] = event.dataTransfer.files;
 
       if (file.type === 'image/svg+xml') {
-        this.setState({ filename: file.name })
+        this.setState({ filename: file.name });
 
-        if (typeof this.props.onDrop === 'function') this.props.onDrop(event)
+        if (typeof this.props.onDrop === 'function') this.props.onDrop(event);
       }
     }
-  }
+  };
 
   render() {
     return (
@@ -69,6 +69,6 @@ export default class FileDropZone extends Component {
           }
         `}</style>
       </div>
-    )
+    );
   }
 }

@@ -1,8 +1,8 @@
-import Footer from '../components/Footer'
-import GithubLinks from '../components/GithubLinks'
-import Header from '../components/Header'
-import Page from '../components/Page'
-import Tool from '../components/Tool'
+import Footer from '../components/Footer';
+import GithubLinks from '../components/GithubLinks';
+import Header from '../components/Header';
+import Page from '../components/Page';
+import Tool from '../components/Tool';
 
 const IndexPage = () => (
   <Page
@@ -15,6 +15,6 @@ const IndexPage = () => (
       <GithubLinks author="jaydenseric" project="svg-symbol-viewer" />
     </Footer>
   </Page>
-)
+);
 
-export default IndexPage
+export default IndexPage;
