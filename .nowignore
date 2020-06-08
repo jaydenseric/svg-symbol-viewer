@@ -1,7 +1,8 @@
 .github
 .editorconfig
-.env.build.example
+.env.example
 .eslintrc.json
+.nowignore
 .prettierignore
 .prettierrc.json
 identity.sketch
