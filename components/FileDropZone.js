@@ -1,74 +1,67 @@
 import PropTypes from 'prop-types';
-import { Component } from 'react';
+import { useCallback, useState } from 'react';
 
-export default class FileDropZone extends Component {
-  static propTypes = {
-    label: PropTypes.string.isRequired,
-    onDrop: PropTypes.func,
-  };
+// eslint-disable-next-line jsdoc/require-jsdoc
+export default function FileDropZone({ label, onFileDrop }) {
+  const [dragging, setDragging] = useState(false);
 
-  state = {
-    dragging: false,
-  };
+  const onDragEnter = useCallback(() => {
+    setDragging(true);
+  }, []);
 
-  handleDragEnter = () => {
-    this.setState({ dragging: true });
-  };
-
-  handleDragOver = () => {
+  const onDragOver = useCallback(() => {
     event.preventDefault();
-  };
+  }, []);
 
-  handleDragLeave = () => {
-    this.setState({ dragging: false });
-  };
+  const onDragLeave = useCallback(() => {
+    setDragging(false);
+  }, []);
 
-  handleDrop = (event) => {
-    event.preventDefault();
+  const onDrop = useCallback(
+    (event) => {
+      event.preventDefault();
 
-    this.setState({ dragging: false });
+      setDragging(false);
 
-    if (event.dataTransfer.files.length > 0) {
-      const [file] = event.dataTransfer.files;
+      if (event.dataTransfer.files.length > 0)
+        onFileDrop(event.dataTransfer.files[0]);
+    },
+    [onFileDrop]
+  );
 
-      if (file.type === 'image/svg+xml') {
-        this.setState({ filename: file.name });
+  return (
+    <p
+      className={dragging ? 'active' : 'inactive'}
+      onDragEnter={onDragEnter}
+      onDragOver={onDragOver}
+      onDragLeave={onDragLeave}
+      onDrop={onDrop}
+    >
+      {label}
+      <style jsx>{`
+        p {
+          margin: 0;
+          border-size: 0.2em;
+          border-style: dashed;
+          border-radius: 0.4em;
+          padding: 2em;
+          text-align: center;
+          transition: 0.25s;
+        }
 
-        if (typeof this.props.onDrop === 'function') this.props.onDrop(event);
-      }
-    }
-  };
+        .inactive {
+          border-color: black;
+        }
 
-  render() {
-    return (
-      <div
-        className={this.state.dragging ? 'active' : 'inactive'}
-        onDragEnter={this.handleDragEnter}
-        onDragOver={this.handleDragOver}
-        onDragLeave={this.handleDragLeave}
-        onDrop={this.handleDrop}
-      >
-        <p>{this.state.filename ? this.state.filename : this.props.label}</p>
-        <style jsx>{`
-          div {
-            border-size: 0.2em;
-            border-style: dashed;
-            border-radius: 0.4em;
-            padding: 2em;
-            text-align: center;
-            transition: 0.25s;
-          }
-          .inactive {
-            border-color: black;
-          }
-          .active {
-            border-color: white;
-          }
-          p {
-            margin: 0;
-          }
-        `}</style>
-      </div>
-    );
-  }
+        .active {
+          border-color: white;
+        }
+      `}</style>
+    </p>
+  );
 }
+
+FileDropZone.propTypes = {
+  label: PropTypes.string.isRequired,
+  onFileDrop: PropTypes.func.isRequired,
+};

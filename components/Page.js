@@ -35,11 +35,13 @@ const Page = ({ title, description, children }) => (
         color: white;
         touch-action: manipulation;
       }
+
       body {
         margin: 0;
         min-width: 320px;
         overflow-x: hidden;
       }
+
       ::selection {
         background-color: hsla(72, 100%, 60%, 0.85);
       }

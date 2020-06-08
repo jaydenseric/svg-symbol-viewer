@@ -22,22 +22,27 @@ const GithubLinks = ({ author, project }) => (
         text-align: left;
         color: black;
       }
+
       img {
         margin-right: 0.3em;
         width: 2em;
       }
+
       p {
         margin: 0;
       }
+
       a {
         display: inline-block;
         color: white;
         text-decoration: none;
       }
+
       a:hover,
       a:focus {
         text-decoration: underline;
       }
+
       a:focus {
         outline: 0;
       }

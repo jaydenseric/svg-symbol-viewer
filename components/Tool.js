@@ -1,57 +1,57 @@
-import { Component } from 'react';
+import { useCallback, useState } from 'react';
 import FileDropZone from './FileDropZone';
 import Section from './Section';
 import SymbolList from './SymbolList';
 
-export default class Tool extends Component {
-  state = {
-    svg: null,
-    symbols: null,
-  };
+// eslint-disable-next-line jsdoc/require-jsdoc
+export default function Tool() {
+  const [svgFilename, setSvgFilename] = useState(null);
+  const [svg, setSvg] = useState(null);
+  const [symbols, setSymbols] = useState(null);
 
-  onDrop = (event) => {
-    const reader = new window.FileReader();
+  const onFileDrop = useCallback((file) => {
+    if (file.type === 'image/svg+xml') {
+      setSvgFilename(file.name);
 
-    reader.onload = () => {
-      const parser = new window.DOMParser();
-      const doc = parser.parseFromString(reader.result, 'image/svg+xml');
-      const idList = Array.from(doc.querySelectorAll('symbol[id]')).map(
-        (element) => element.id
-      );
+      const reader = new window.FileReader();
 
-      this.setState({
-        svg: reader.result,
-        symbols: idList,
-      });
-    };
+      reader.onload = () => {
+        const parser = new window.DOMParser();
+        const doc = parser.parseFromString(reader.result, 'image/svg+xml');
+        const idList = Array.from(doc.querySelectorAll('symbol[id]')).map(
+          (element) => element.id
+        );
 
-    reader.readAsText(event.dataTransfer.files[0]);
-  };
+        setSvg(reader.result);
+        setSymbols(idList);
+      };
 
-  render() {
-    return (
-      <main>
-        <Section>
-          <FileDropZone
-            label="Drop SVG containing symbols"
-            onDrop={this.onDrop}
-          />
-        </Section>
-        {this.state.svg !== null && (
-          <div dangerouslySetInnerHTML={{ __html: this.state.svg }} />
-        )}
-        {this.state.symbols !== null && (
-          <SymbolList symbols={this.state.symbols} />
-        )}
-        <style jsx>{`
-          main {
-            display: block;
-          }
-          div {
-            display: none;
-          }
-        `}</style>
-      </main>
-    );
-  }
+      reader.readAsText(file);
+    } else {
+      setSvgFilename(null);
+      setSvg(null);
+      setSymbols(null);
+    }
+  }, []);
+
+  return (
+    <main>
+      <Section>
+        <FileDropZone
+          label={svgFilename || 'Drop SVG containing symbols'}
+          onFileDrop={onFileDrop}
+        />
+      </Section>
+      {svg !== null && <div dangerouslySetInnerHTML={{ __html: svg }} />}
+      {symbols !== null && <SymbolList symbols={symbols} />}
+      <style jsx>{`
+        main {
+          display: block;
+        }
+        div {
+          display: none;
+        }
+      `}</style>
+    </main>
+  );
 }
