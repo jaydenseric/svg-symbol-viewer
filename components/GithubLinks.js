@@ -1,58 +1,34 @@
+import { LinkText } from 'device-agnostic-ui';
 import PropTypes from 'prop-types';
+import IconGitHub from './IconGitHub';
 
-const GithubLinks = ({ author, project }) => (
+const GitHubLinks = ({ author, project }) => (
   <section>
-    <img src="/static/github-logo.svg" alt="Github logo" />
+    <IconGitHub size="2em" />
     <p>
-      <a key="github-links-author" href={`https://github.com/${author}`}>
-        {author}
-      </a>{' '}
-      /{' '}
-      <a
-        key="github-links-project"
-        href={`https://github.com/${author}/${project}`}
-      >
+      <LinkText href={`https://github.com/${author}`}>{author}</LinkText> /{' '}
+      <LinkText href={`https://github.com/${author}/${project}`}>
         {project}
-      </a>
+      </LinkText>
     </p>
     <style jsx>{`
       section {
         display: inline-flex;
         align-items: center;
-        text-align: left;
-        color: black;
-      }
-
-      img {
-        margin-right: 0.3em;
-        width: 2em;
       }
 
       p {
-        margin: 0;
-      }
-
-      a {
-        display: inline-block;
-        color: white;
-        text-decoration: none;
-      }
-
-      a:hover,
-      a:focus {
-        text-decoration: underline;
-      }
-
-      a:focus {
-        outline: 0;
+        margin-left: 0.3em;
+        margin-top: 0;
+        margin-bottom: 0;
       }
     `}</style>
   </section>
 );
 
-GithubLinks.propTypes = {
+GitHubLinks.propTypes = {
   author: PropTypes.string.isRequired,
   project: PropTypes.string.isRequired,
 };
 
-export default GithubLinks;
+export default GitHubLinks;

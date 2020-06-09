@@ -3,9 +3,19 @@
   "short_name": "Viewer",
   "start_url": "/",
   "display": "minimal-ui",
-  "theme_color": "#7d0bff",
-  "background_color": "#7d0bff",
+  "theme_color": "white",
+  "background_color": "white",
   "icons": [
+    {
+      "src": "favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    },
+    {
+      "src": "favicon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
     {
       "src": "apple-touch-icon.png",
       "type": "image/png",

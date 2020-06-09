@@ -5,10 +5,7 @@ const Footer = ({ children }) => (
     {children}
     <style jsx>{`
       footer {
-        margin: 2em auto 4em;
-        max-width: 28em;
-        padding: 0 1.5em;
-        text-align: center;
+        margin: calc(var(--daui-spacing) * 2) var(--daui-spacing);
       }
     `}</style>
   </footer>

@@ -31,7 +31,7 @@ export default function FileDropZone({ label, onFileDrop }) {
 
   return (
     <p
-      className={dragging ? 'active' : 'inactive'}
+      className={dragging ? 'active' : undefined}
       onDragEnter={onDragEnter}
       onDragOver={onDragOver}
       onDragLeave={onDragLeave}
@@ -41,20 +41,19 @@ export default function FileDropZone({ label, onFileDrop }) {
       <style jsx>{`
         p {
           margin: 0;
-          border-size: 0.2em;
+          border-size: 4px;
           border-style: dashed;
-          border-radius: 0.4em;
+          border-radius: 8px;
           padding: 2em;
-          text-align: center;
-          transition: 0.25s;
-        }
-
-        .inactive {
-          border-color: black;
+          font-weight: bold;
         }
 
         .active {
-          border-color: white;
+          border-color: hsl(
+            var(--daui-interact-hue),
+            var(--daui-interact-saturation),
+            calc(var(--daui-interact-lightness) + 20%)
+          );
         }
       `}</style>
     </p>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192">
+  <title>SVG symbol viewer icon</title>
+  <g stroke="black" fill="black">
+    <circle stroke-width="9.6" fill="none" cx="81.6" cy="81.6" r="76.8" />
+    <circle stroke-width="3" cx="81.6" cy="33.293" r="11.52" />
+    <circle stroke-width="3" cx="115.2" cy="48" r="11.52" />
+    <circle stroke-width="3" cx="129.907" cy="81.6" r="11.52" />
+    <circle stroke-width="3" cx="115.2" cy="115.2" r="11.52" />
+    <circle stroke-width="3" cx="81.6" cy="129.907" r="11.52" />
+    <circle stroke-width="3" cx="48" cy="115.2" r="11.52" />
+    <circle stroke-width="3" cx="33.293" cy="81.6" r="11.52" />
+    <circle stroke-width="3" cx="48" cy="48" r="11.52" />
+    <path stroke-width="15.36" d="M81.6 131.833V34.082M31.367 81.6h97.751M46.08 46.08l69.12 69.12m-69.12 1.92L115.2 48" />
+    <path stroke-width="26.88" d="M134.4 134.4l48 48" />
+  </g>
+</svg>

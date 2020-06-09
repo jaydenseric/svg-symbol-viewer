@@ -15,6 +15,7 @@
   },
   "browserslist": "Node >= 12, > 0.5%, not dead",
   "dependencies": {
+    "device-agnostic-ui": "^5.1.1",
     "next": "^9.4.4",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",

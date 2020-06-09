@@ -1,16 +1,14 @@
 import PropTypes from 'prop-types';
 
-const Section = ({ children }) => (
-  <section>
-    {children}
+const Section = (props) => (
+  <>
+    <section {...props} />
     <style jsx>{`
       section {
-        margin: 2em auto;
-        max-width: 28em;
-        padding: 0 1.5em;
+        margin: calc(var(--daui-spacing) * 2) 0;
       }
     `}</style>
-  </section>
+  </>
 );
 
 Section.propTypes = {
