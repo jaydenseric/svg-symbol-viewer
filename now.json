@@ -1,13 +1,5 @@
 {
   "version": 2,
   "scope": "jaydenseric",
-  "trailingSlash": false,
-  "build": {
-    "env": {
-      "PROTOCOL": "https",
-      "HOST": "svgsymbolviewer.io",
-      "PORT": "80",
-      "GA_TRACKING_ID": "UA-83641101-1"
-    }
-  }
+  "trailingSlash": false
 }

@@ -1,6 +1,5 @@
 .github
 .editorconfig
-.env.example
 .eslintrc.json
 .nowignore
 .prettierignore
