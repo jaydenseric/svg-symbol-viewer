@@ -5,5 +5,5 @@
 .nowignore
 .prettierignore
 .prettierrc.json
-identity.sketch
+assets.sketch
 readme.md
