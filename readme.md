@@ -9,15 +9,15 @@ An online, no-upload drag-and-drop SVG file symbol extractor and viewer: [svgsym
 1.  Install the latest [Node.js and npm](https://npmjs.com/get-npm).
 2.  Install the latest [Vercel CLI](https://vercel.com/download).
 3.  In the project directory, run `npm install`.
-4.  In the project directory, run `now env pull`.
+4.  In the project directory, run `vercel env pull`.
 
 ## Scripts
 
 Run scripts in the project directory.
 
-- Run `now dev` for development.
-- Run `now` for a preview deployment.
-- Run `now --prod` for a production deployment.
+- Run `vercel dev` for development.
+- Run `vercel` for a preview deployment.
+- Run `vercel --prod` for a production deployment.
 
 ## Editor
 

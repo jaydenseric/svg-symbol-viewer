@@ -1,8 +1,8 @@
 .github
 .editorconfig
 .eslintrc.json
-.nowignore
 .prettierignore
 .prettierrc.json
+.vercelignore
 assets.sketch
 readme.md
