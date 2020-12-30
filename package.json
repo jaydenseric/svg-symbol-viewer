@@ -11,28 +11,29 @@
   "bugs": "https://github.com/jaydenseric/svg-symbol-viewer/issues",
   "funding": "https://github.com/sponsors/jaydenseric",
   "engines": {
-    "node": "^12.0.0 || >= 13.7.0"
+    "node": "^12.0.0 || >= 13.7.0",
+    "npm": ">= 7"
   },
   "browserslist": "Node 12 - 13 and Node < 13, Node >= 13.7, > 0.5%, not dead",
   "dependencies": {
-    "device-agnostic-ui": "^5.1.1",
-    "next": "^9.4.4",
+    "device-agnostic-ui": "^6.0.0",
+    "next": "^10.0.4",
     "prop-types": "^15.7.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.4.0",
-    "eslint-config-env": "^15.0.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-jsdoc": "^29.2.0",
+    "eslint": "^7.16.0",
+    "eslint-config-env": "^15.0.1",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsdoc": "^30.7.9",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.20.3",
-    "eslint-plugin-react-hooks": "^4.0.8",
-    "prettier": "^2.0.5"
+    "eslint-plugin-prettier": "^3.3.0",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "prettier": "^2.2.1"
   },
   "scripts": {
     "test": "npm run test:eslint && npm run test:prettier",
