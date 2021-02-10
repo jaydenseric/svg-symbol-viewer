@@ -2,7 +2,6 @@ import { Scroll } from 'device-agnostic-ui';
 import PropTypes from 'prop-types';
 import styles from './SymbolList.module.css';
 
-// eslint-disable-next-line jsdoc/require-jsdoc
 export default function SymbolList({
   symbols,
   displayStrokes = true,

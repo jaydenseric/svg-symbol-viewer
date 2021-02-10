@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { useCallback, useState } from 'react';
 import styles from './FileDropZone.module.css';
 
-// eslint-disable-next-line jsdoc/require-jsdoc
 export default function FileDropZone({ label, onFileDrop }) {
   const [dragging, setDragging] = useState(false);
 

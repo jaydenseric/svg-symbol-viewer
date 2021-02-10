@@ -7,7 +7,6 @@ import IconSvgSymbolViewer from './IconSvgSymbolViewer';
 import Section from './Section';
 import SymbolList from './SymbolList';
 
-// eslint-disable-next-line jsdoc/require-jsdoc
 export default function SvgSymbolViewer() {
   const [svgFilename, setSvgFilename] = useState(null);
   const [svg, setSvg] = useState(null);
