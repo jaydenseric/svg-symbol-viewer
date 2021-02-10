@@ -45,7 +45,7 @@
     "test:eslint": "eslint .",
     "test:stylelint": "stylelint '**/*.css'",
     "test:prettier": "prettier -c .",
-    "dev": "next",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start"
   }
