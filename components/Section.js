@@ -1,15 +1,7 @@
 import PropTypes from 'prop-types';
+import styles from './Section.module.css';
 
-const Section = (props) => (
-  <>
-    <section {...props} />
-    <style jsx>{`
-      section {
-        margin: calc(var(--daui-spacing) * 2) 0;
-      }
-    `}</style>
-  </>
-);
+const Section = (props) => <section {...props} className={styles.section} />;
 
 Section.propTypes = {
   children: PropTypes.node.isRequired,

@@ -1,28 +1,17 @@
 import { LinkText } from 'device-agnostic-ui';
 import PropTypes from 'prop-types';
+import styles from './GitHubLinks.module.css';
 import IconGitHub from './IconGitHub';
 
 const GitHubLinks = ({ author, project }) => (
-  <section>
+  <section className={styles.section}>
     <IconGitHub size="2em" />
-    <p>
+    <p className={styles.p}>
       <LinkText href={`https://github.com/${author}`}>{author}</LinkText> /{' '}
       <LinkText href={`https://github.com/${author}/${project}`}>
         {project}
       </LinkText>
     </p>
-    <style jsx>{`
-      section {
-        display: inline-flex;
-        align-items: center;
-      }
-
-      p {
-        margin-left: 0.3em;
-        margin-top: 0;
-        margin-bottom: 0;
-      }
-    `}</style>
   </section>
 );
 

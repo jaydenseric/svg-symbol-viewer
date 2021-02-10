@@ -1,4 +1,11 @@
-import { stylesGlobal, stylesGlobalTheme } from 'device-agnostic-ui';
+import 'device-agnostic-ui/public/theme.css';
+import 'device-agnostic-ui/public/global.css';
+import 'device-agnostic-ui/public/components/Heading.css';
+import 'device-agnostic-ui/public/components/Icon.css';
+import 'device-agnostic-ui/public/components/LinkText.css';
+import 'device-agnostic-ui/public/components/Margin.css';
+import 'device-agnostic-ui/public/components/Scroll.css';
+import 'device-agnostic-ui/public/components/Toggle.css';
 import Head from 'next/head';
 import Router from 'next/router';
 import Footer from '../components/Footer';
@@ -31,12 +38,6 @@ const App = ({ Component, pageProps }) => (
     <Footer>
       <GitHubLinks author="jaydenseric" project="svg-symbol-viewer" />
     </Footer>
-    <style jsx global>
-      {stylesGlobalTheme}
-    </style>
-    <style jsx global>
-      {stylesGlobal}
-    </style>
   </>
 );
 

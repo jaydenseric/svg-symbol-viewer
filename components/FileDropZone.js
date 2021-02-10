@@ -1,5 +1,7 @@
+import classNameProp from 'class-name-prop';
 import PropTypes from 'prop-types';
 import { useCallback, useState } from 'react';
+import styles from './FileDropZone.module.css';
 
 // eslint-disable-next-line jsdoc/require-jsdoc
 export default function FileDropZone({ label, onFileDrop }) {
@@ -31,31 +33,13 @@ export default function FileDropZone({ label, onFileDrop }) {
 
   return (
     <p
-      className={dragging ? 'active' : undefined}
+      className={classNameProp(styles.p, dragging && styles.active)}
       onDragEnter={onDragEnter}
       onDragOver={onDragOver}
       onDragLeave={onDragLeave}
       onDrop={onDrop}
     >
       {label}
-      <style jsx>{`
-        p {
-          margin: 0;
-          border-size: 4px;
-          border-style: dashed;
-          border-radius: 8px;
-          padding: 2em;
-          font-weight: bold;
-        }
-
-        .active {
-          border-color: hsl(
-            var(--daui-interact-hue),
-            var(--daui-interact-saturation),
-            calc(var(--daui-interact-lightness) + 20%)
-          );
-        }
-      `}</style>
     </p>
   );
 }

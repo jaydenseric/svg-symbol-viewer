@@ -1,15 +1,7 @@
 import PropTypes from 'prop-types';
+import styles from './Header.module.css';
 
-const Header = (props) => (
-  <>
-    <header {...props} />
-    <style jsx>{`
-      header {
-        margin: var(--daui-spacing);
-      }
-    `}</style>
-  </>
-);
+const Header = (props) => <header {...props} className={styles.header} />;
 
 Header.propTypes = {
   children: PropTypes.node.isRequired,

@@ -3,6 +3,7 @@
 .eslintrc.json
 .prettierignore
 .prettierrc.json
+.stylelintrc.json
 .vercelignore
 assets.sketch
 readme.md

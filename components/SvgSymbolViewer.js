@@ -2,6 +2,7 @@ import { Heading, Margin, Toggle } from 'device-agnostic-ui';
 import { useCallback, useState } from 'react';
 import FileDropZone from './FileDropZone';
 import Header from './Header';
+import Hidden from './Hidden';
 import IconSvgSymbolViewer from './IconSvgSymbolViewer';
 import Section from './Section';
 import SymbolList from './SymbolList';
@@ -60,7 +61,7 @@ export default function SvgSymbolViewer() {
           onFileDrop={onFileDrop}
         />
       </Margin>
-      {svg !== null && <div dangerouslySetInnerHTML={{ __html: svg }} />}
+      {svg !== null && <Hidden dangerouslySetInnerHTML={{ __html: svg }} />}
       {symbols !== null && (
         <>
           <Margin>
@@ -92,11 +93,6 @@ export default function SvgSymbolViewer() {
           />
         </>
       )}
-      <style jsx>{`
-        div {
-          display: none;
-        }
-      `}</style>
     </Section>
   );
 }

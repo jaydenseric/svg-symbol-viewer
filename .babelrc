@@ -1,12 +1,3 @@
 {
-  "presets": [
-    [
-      "next/babel",
-      {
-        "styled-jsx": {
-          "optimizeForSpeed": false
-        }
-      }
-    ]
-  ]
+  "presets": ["next/babel"]
 }

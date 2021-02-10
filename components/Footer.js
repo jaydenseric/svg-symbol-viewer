@@ -1,14 +1,8 @@
 import PropTypes from 'prop-types';
+import styles from './Footer.module.css';
 
 const Footer = ({ children }) => (
-  <footer>
-    {children}
-    <style jsx>{`
-      footer {
-        margin: calc(var(--daui-spacing) * 2) var(--daui-spacing);
-      }
-    `}</style>
-  </footer>
+  <footer className={styles.footer}>{children}</footer>
 );
 
 Footer.propTypes = {

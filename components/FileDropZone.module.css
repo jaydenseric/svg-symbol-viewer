@@ -1,0 +1,16 @@
+.p {
+  margin: 0;
+  border-width: 3px;
+  border-style: dashed;
+  border-radius: 8px;
+  padding: 2em;
+  font-weight: bold;
+}
+
+.active {
+  border-color: hsl(
+    var(--daui-interact-hue),
+    var(--daui-interact-saturation),
+    calc(var(--daui-interact-lightness) + 20%)
+  );
+}
