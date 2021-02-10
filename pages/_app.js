@@ -7,17 +7,9 @@ import 'device-agnostic-ui/public/components/Margin.css';
 import 'device-agnostic-ui/public/components/Scroll.css';
 import 'device-agnostic-ui/public/components/Toggle.css';
 import Head from 'next/head';
-import Router from 'next/router';
 import Footer from '../components/Footer';
 import GitHubLinks from '../components/GitHubLinks';
-
-if (process.env.GA_TRACKING_ID)
-  Router.events.on('routeChangeComplete', (url) => {
-    if (typeof window.ga === 'function') {
-      window.ga('set', 'page', url);
-      window.ga('send', 'pageview');
-    }
-  });
+import GoogleAnalyticsPageviewTracker from '../components/GoogleAnalyticsPageviewTracker';
 
 // eslint-disable-next-line react/prop-types
 const App = ({ Component, pageProps }) => (
@@ -38,6 +30,7 @@ const App = ({ Component, pageProps }) => (
     <Footer>
       <GitHubLinks author="jaydenseric" project="svg-symbol-viewer" />
     </Footer>
+    {!!process.env.GA_TRACKING_ID && <GoogleAnalyticsPageviewTracker />}
   </>
 );
 
