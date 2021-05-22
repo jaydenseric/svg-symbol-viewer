@@ -1,4 +1,6 @@
-import { Heading, Margin, Toggle } from 'device-agnostic-ui';
+import Heading from 'device-agnostic-ui/public/components/Heading.js';
+import Margin from 'device-agnostic-ui/public/components/Margin.js';
+import Toggle from 'device-agnostic-ui/public/components/Toggle.js';
 import { useCallback, useState } from 'react';
 import FileDropZone from './FileDropZone';
 import Header from './Header';

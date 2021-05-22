@@ -1,4 +1,4 @@
-import { Icon } from 'device-agnostic-ui';
+import Icon from 'device-agnostic-ui/public/components/Icon.js';
 
 const IconSvgSymbolViewer = (props) => (
   <Icon title="SVG symbol viewer" {...props}>

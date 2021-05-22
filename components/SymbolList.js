@@ -1,4 +1,4 @@
-import { Scroll } from 'device-agnostic-ui';
+import Scroll from 'device-agnostic-ui/public/components/Scroll.js';
 import PropTypes from 'prop-types';
 import styles from './SymbolList.module.css';
 

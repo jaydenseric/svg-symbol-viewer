@@ -1,4 +1,4 @@
-import { LinkText } from 'device-agnostic-ui';
+import LinkText from 'device-agnostic-ui/public/components/LinkText.js';
 import PropTypes from 'prop-types';
 import styles from './GitHubLinks.module.css';
 import IconGitHub from './IconGitHub';
