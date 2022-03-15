@@ -15,7 +15,7 @@ export const css = new Set([
 
 /** React component for the home page. */
 export default function PageHome() {
-  useTitle("SVG symbol viewer");
+  useTitle("Home");
   useDescription(
     "An online, no-upload drag-and-drop SVG file symbol extractor and viewer.",
   );

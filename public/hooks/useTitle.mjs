@@ -12,7 +12,7 @@ export default function useTitle(title, priority) {
   useHead(
     "1-1-title",
     useMemo(() => {
-      const fullTitle = `${title} - Ruck`;
+      const fullTitle = `${title} - SVG symbol viewer`;
       return h(
         Fragment,
         null,
