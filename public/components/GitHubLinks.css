@@ -1,0 +1,10 @@
+.GitHubLinks__section {
+  display: inline-flex;
+  align-items: center;
+}
+
+.GitHubLinks__p {
+  margin-left: 0.5em;
+  margin-top: 0;
+  margin-bottom: 0;
+}

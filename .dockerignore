@@ -1,0 +1,10 @@
+**/.DS_Store
+.git
+.github
+.vscode
+scripts/.env.sh
+scripts/dev.sh
+.editorconfig
+.gitignore
+fly.toml
+readme.md

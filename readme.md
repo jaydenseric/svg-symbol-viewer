@@ -1,29 +1,57 @@
 # SVG symbol viewer
 
-[![CI status](https://github.com/jaydenseric/svg-symbol-viewer/workflows/CI/badge.svg)](https://github.com/jaydenseric/svg-symbol-viewer/actions)
+An online, no-upload drag-and-drop SVG file symbol extractor and viewer:
+[svgsymbolviewer.io](https://svgsymbolviewer.io).
 
-An online, no-upload drag-and-drop SVG file symbol extractor and viewer: [svgsymbolviewer.io](https://svgsymbolviewer.io).
+## Requirements
 
-## Setup
+- [Deno CLI](https://deno.land/#installation) v1.13.2+.
 
-1.  Install the latest [Node.js and npm](https://npmjs.com/get-npm).
-2.  Install the latest [Vercel CLI](https://vercel.com/download).
-3.  In the project directory, run `npm install`.
-4.  In the project directory, run `vercel env pull`.
+## Installation
+
+For a local development installation, create a project `scripts/.env.sh` file
+containing the following environment variables, with values customized for your
+local environment:
+
+```sh
+# Development or production mode; "true" or "false".
+export RUCK_DEV="true"
+
+# The localhost port to serve the Ruck app on.
+export RUCK_PORT="3000"
+```
 
 ## Scripts
 
-Run scripts in the project directory.
+### Dev
 
-- Run `vercel dev` for development.
-- Run `vercel` for a preview deployment.
-- Run `vercel --prod` for a production deployment.
+To load the environment variables from `scripts/.env.sh` and serve the Ruck app:
 
-## Editor
+```sh
+./scripts/dev.sh
+```
 
-Your editor must support:
+### Serve
 
-- [EditorConfig](https://editorconfig.org)
-- [ESLint](https://eslint.org)
-  - [Visual Studio Code](https://code.visualstudio.com): [`vscode-eslint`](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-  - [Atom](https://atom.io): [`linter-eslint`](https://atom.io/packages/linter-eslint)
+To serve the Ruck app for either development or production (requires environment
+variables):
+
+```sh
+./scripts/serve.sh
+```
+
+### Format
+
+To format the project:
+
+```sh
+deno fmt
+```
+
+### Lint
+
+To lint the project:
+
+```sh
+deno lint
+```

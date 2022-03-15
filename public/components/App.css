@@ -1,0 +1,11 @@
+.App__header {
+  margin: calc(var(--daui-spacing) * 2) var(--daui-spacing);
+}
+
+.App__footer {
+  margin: calc(var(--daui-spacing) * 2) var(--daui-spacing);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--daui-spacing);
+}

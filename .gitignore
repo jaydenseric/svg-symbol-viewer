@@ -1,6 +1,2 @@
-node_modules
-*.log
 .DS_Store
-.next
-.vercel
-.env
+/scripts/.env.sh

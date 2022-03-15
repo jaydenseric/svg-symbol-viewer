@@ -2,17 +2,22 @@ name: CI
 on: [push, pull_request]
 jobs:
   test:
-    name: Test with Node.js v${{ matrix.node }} and ${{ matrix.os }}
+    name: Test with ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest]
-        node: ['12', '14', '15']
+    env:
+      RUCK_DEV: "true"
+      RUCK_PORT: "8080"
     steps:
-      - uses: actions/checkout@v2
-      - name: Setup Node.js v${{ matrix.node }}
-        uses: actions/setup-node@v2
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Setup Deno
+        uses: denoland/setup-deno@v1
         with:
-          node-version: ${{ matrix.node }}
-      - name: npm install and test
-        run: npm install-test
+          deno-version: "^1.0.0"
+      - name: Format check
+        run: deno fmt --check
+      - name: Lint
+        run: deno lint
