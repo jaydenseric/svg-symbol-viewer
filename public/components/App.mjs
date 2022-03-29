@@ -28,34 +28,36 @@ const css = new Set([
  */
 export default function App() {
   const route = useRoute();
-  const headMetaFragment = useMemo(() =>
-    h(
-      Fragment,
-      null,
-      h("meta", {
-        name: "viewport",
-        content: "width=device-width, initial-scale=1",
-      }),
-      h("meta", { name: "theme-color", content: "white" }),
-      h("meta", {
-        name: "og:image",
-        content: `${route.url.origin}/social-preview.png`,
-      }),
-      h("meta", { name: "twitter:card", content: "summary" }),
-      h("meta", { name: "twitter:site", content: "@jaydenseric" }),
-      h("meta", { name: "twitter:creator", content: "@jaydenseric" }),
-      h("link", { rel: "icon", href: "/favicon.ico" }),
-      h("link", {
-        rel: "icon",
-        type: "image/svg+xml",
-        sizes: "any",
-        href: "/favicon.svg",
-      }),
-      h("link", { rel: "apple-touch-icon", href: "/apple-touch-icon.png" }),
-      h("link", { rel: "manifest", href: "/manifest.webmanifest" }),
-    ), [route.url.origin]);
 
-  useHead("1-1-meta", headMetaFragment);
+  useHead(
+    "1-1-meta",
+    useMemo(() =>
+      h(
+        Fragment,
+        null,
+        h("meta", {
+          name: "viewport",
+          content: "width=device-width, initial-scale=1",
+        }),
+        h("meta", { name: "theme-color", content: "white" }),
+        h("meta", {
+          name: "og:image",
+          content: `${route.url.origin}/social-preview.png`,
+        }),
+        h("meta", { name: "twitter:card", content: "summary" }),
+        h("meta", { name: "twitter:site", content: "@jaydenseric" }),
+        h("meta", { name: "twitter:creator", content: "@jaydenseric" }),
+        h("link", { rel: "icon", href: "/favicon.ico" }),
+        h("link", {
+          rel: "icon",
+          type: "image/svg+xml",
+          sizes: "any",
+          href: "/favicon.svg",
+        }),
+        h("link", { rel: "apple-touch-icon", href: "/apple-touch-icon.png" }),
+        h("link", { rel: "manifest", href: "/manifest.webmanifest" }),
+      ), [route.url.origin]),
+  );
 
   for (const href of css) useCss(href);
 
