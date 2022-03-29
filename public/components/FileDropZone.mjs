@@ -3,7 +3,7 @@
 import classNameProp from "class-name-prop";
 import { createElement as h, useCallback, useState } from "react";
 
-/** @type {import("ruck/routeDetailsForContentWithCss.mjs").RouteContentWithCss["css"]} */
+/** @type {import("ruck/routePlanForContentWithCss.mjs").RouteContentWithCss["css"]} */
 export const css = new Set([
   "/components/FileDropZone.css",
 ]);

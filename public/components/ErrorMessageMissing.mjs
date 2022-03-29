@@ -5,7 +5,7 @@ import TransferContext from "ruck/TransferContext.mjs";
 
 import ErrorMessage, { css } from "./ErrorMessage.mjs";
 
-/** @type {import("ruck/routeDetailsForContentWithCss.mjs").RouteContentWithCss["css"]} */
+/** @type {import("ruck/routePlanForContentWithCss.mjs").RouteContentWithCss["css"]} */
 export { css };
 
 /** React component for a missing error message. */

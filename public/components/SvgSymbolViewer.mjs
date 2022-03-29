@@ -7,7 +7,7 @@ import { createElement as h, Fragment, useCallback, useState } from "react";
 import FileDropZone, { css as cssFileDropZone } from "./FileDropZone.mjs";
 import SymbolList, { css as cssSymbolList } from "./SymbolList.mjs";
 
-/** @type {import("ruck/routeDetailsForContentWithCss.mjs").RouteContentWithCss["css"]} */
+/** @type {import("ruck/routePlanForContentWithCss.mjs").RouteContentWithCss["css"]} */
 export const css = new Set([
   ...cssMargin,
   ...cssToggle,
