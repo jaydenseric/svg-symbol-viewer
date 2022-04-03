@@ -39,6 +39,7 @@ export default function App() {
           name: "viewport",
           content: "width=device-width, initial-scale=1",
         }),
+        h("meta", { name: "color-scheme", content: "light dark" }),
         h("meta", { name: "theme-color", content: "white" }),
         h("meta", {
           name: "og:image",
