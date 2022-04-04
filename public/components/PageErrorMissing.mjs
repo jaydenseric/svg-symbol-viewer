@@ -3,13 +3,13 @@
 import { createElement as h, useContext } from "react";
 import TransferContext from "ruck/TransferContext.mjs";
 
-import ErrorMessage, { css } from "./ErrorMessage.mjs";
+import PageError, { css } from "./PageError.mjs";
 
 /** @type {import("ruck/routePlanForContentWithCss.mjs").RouteContentWithCss["css"]} */
 export { css };
 
-/** React component for a missing error message. */
-export default function ErrorMessageMissing() {
+/** React component for a missing error page. */
+export default function PageErrorMissing() {
   const ruckTransfer = useContext(TransferContext);
 
   if (ruckTransfer) {
@@ -17,7 +17,7 @@ export default function ErrorMessageMissing() {
     ruckTransfer.responseInit.statusText = "Not Found";
   }
 
-  return h(ErrorMessage, {
+  return h(PageError, {
     title: "Error 404",
     description: "Something is missing.",
   });

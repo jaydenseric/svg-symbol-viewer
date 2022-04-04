@@ -3,9 +3,9 @@
 import { createElement as h } from "react";
 import routePlanForContentWithCss from "ruck/routePlanForContentWithCss.mjs";
 
-import ErrorMessageLoading, {
-  css as cssErrorMessageLoading,
-} from "./components/ErrorMessageLoading.mjs";
+import PageErrorLoading, {
+  css as cssPageErrorLoading,
+} from "./components/PageErrorLoading.mjs";
 
 /**
  * Gets the Ruck app route plan for a URL.
@@ -27,9 +27,9 @@ export default function router(url, headManager, isInitialRoute) {
   }
 
   return routePlanForContentWithCss(
-    import("./components/ErrorMessageMissing.mjs").then(
-      ({ default: ErrorMessageMissing, css }) => ({
-        content: h(ErrorMessageMissing),
+    import("./components/PageErrorMissing.mjs").then(
+      ({ default: PageErrorMissing, css }) => ({
+        content: h(PageErrorMissing),
         css,
       }),
       catchImportContentWithCss,
@@ -48,7 +48,7 @@ function catchImportContentWithCss(cause) {
   console.error(new Error("Import rejection for route with CSS.", { cause }));
 
   return {
-    content: h(ErrorMessageLoading),
-    css: cssErrorMessageLoading,
+    content: h(PageErrorLoading),
+    css: cssPageErrorLoading,
   };
 }

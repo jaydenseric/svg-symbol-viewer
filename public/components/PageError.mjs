@@ -13,12 +13,12 @@ export const css = new Set([
 ]);
 
 /**
- * React component for an error message.
+ * React component for an error page.
  * @param {object} props Props.
  * @param {string} props.title Title.
  * @param {import("react").ReactNode} props.description Description.
  */
-export default function ErrorMessage({ title, description }) {
+export default function PageError({ title, description }) {
   return h(
     Margin,
     null,
