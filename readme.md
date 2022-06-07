@@ -5,7 +5,7 @@ An online, no-upload drag-and-drop SVG file symbol extractor and viewer:
 
 ## Requirements
 
-- [Deno CLI](https://deno.land/#installation) v1.20.1+.
+- [Deno CLI](https://deno.land/#installation) v1.21.2+.
 
 ## Installation
 
