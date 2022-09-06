@@ -10,7 +10,7 @@ serve({
     import.meta.url,
   ),
   esModuleShimsSrc:
-    "https://unpkg.com/es-module-shims@1.5.9/dist/es-module-shims.js",
+    "https://unpkg.com/es-module-shims@1.5.17/dist/es-module-shims.js",
   port: Number(Deno.env.get("RUCK_PORT")),
 });
 
