@@ -1,6 +1,7 @@
 // @ts-check
 
 /**
+ * @import { ComponentPropsWithoutRef } from "react"
  * @import { RouteContentWithCss } from "ruck/routePlanForContentWithCss.mjs"
  */
 
@@ -32,6 +33,11 @@ export default function SvgSymbolViewer() {
   const [displayStrokes, setDisplayStrokes] = useState(true);
   const [displayFills, setDisplayFills] = useState(true);
 
+  /**
+   * @satisfies {NonNullable<
+   *   ComponentPropsWithoutRef<typeof FileDropZone>["onFileDrop"]
+   * >}
+   */
   const onFileDrop = useCallback((file) => {
     if (file.type === "image/svg+xml") {
       setSvgFilename(file.name);

@@ -1,6 +1,7 @@
 // @ts-check
 
 /**
+ * @import { ComponentPropsWithoutRef } from "react"
  * @import { RouteContentWithCss } from "ruck/routePlanForContentWithCss.mjs"
  */
 
@@ -16,8 +17,8 @@ export const css = new Set([
  * React component for a file drop zone.
  * @param {object} props Props.
  * @param {string} props.label Label.
- * @param {Function} props.onFileDrop Callback for when a file is dropped on the
- *   zone.
+ * @param {(file: File) => void} props.onFileDrop Callback for when a file is
+ *   dropped on the zone.
  */
 export default function FileDropZone({ label, onFileDrop }) {
   const [dragging, setDragging] = useState(false);
@@ -26,6 +27,11 @@ export default function FileDropZone({ label, onFileDrop }) {
     setDragging(true);
   }, []);
 
+  /**
+   * @satisfies {NonNullable<
+   *   ComponentPropsWithoutRef<"p">["onDragOver"]
+   * >}
+   */
   const onDragOver = useCallback((event) => {
     event.preventDefault();
   }, []);
@@ -34,6 +40,11 @@ export default function FileDropZone({ label, onFileDrop }) {
     setDragging(false);
   }, []);
 
+  /**
+   * @satisfies {NonNullable<
+   *   ComponentPropsWithoutRef<"p">["onDrop"]
+   * >}
+   */
   const onDrop = useCallback(
     (event) => {
       event.preventDefault();
