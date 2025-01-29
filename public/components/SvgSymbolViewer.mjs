@@ -1,5 +1,9 @@
 // @ts-check
 
+/**
+ * @import { RouteContentWithCss } from "ruck/routePlanForContentWithCss.mjs"
+ */
+
 import Margin, { css as cssMargin } from "device-agnostic-ui/Margin.mjs";
 import Toggle, { css as cssToggle } from "device-agnostic-ui/Toggle.mjs";
 import { createElement as h, Fragment, useCallback, useState } from "react";
@@ -7,7 +11,7 @@ import { createElement as h, Fragment, useCallback, useState } from "react";
 import FileDropZone, { css as cssFileDropZone } from "./FileDropZone.mjs";
 import SymbolList, { css as cssSymbolList } from "./SymbolList.mjs";
 
-/** @type {import("ruck/routePlanForContentWithCss.mjs").RouteContentWithCss["css"]} */
+/** @type {RouteContentWithCss["css"]} */
 export const css = new Set([
   ...cssMargin,
   ...cssToggle,

@@ -1,9 +1,13 @@
 // @ts-check
 
+/**
+ * @import { RouteContentWithCss } from "ruck/routePlanForContentWithCss.mjs"
+ */
+
 import Icon, { css as cssIcon } from "device-agnostic-ui/Icon.mjs";
 import { createElement as h } from "react";
 
-/** @type {import("ruck/routePlanForContentWithCss.mjs").RouteContentWithCss["css"]} */
+/** @type {RouteContentWithCss["css"]} */
 export const css = new Set([
   ...cssIcon,
 ]);

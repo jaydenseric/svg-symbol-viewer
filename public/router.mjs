@@ -1,5 +1,10 @@
 // @ts-check
 
+/**
+ * @import { RouteContentWithCss } from "ruck/routePlanForContentWithCss.mjs"
+ * @import { Router } from "ruck/serve.mjs"
+ */
+
 import { createElement as h } from "react";
 import routePlanForContentWithCss from "ruck/routePlanForContentWithCss.mjs";
 
@@ -9,7 +14,7 @@ import PageErrorLoading, {
 
 /**
  * Gets the Ruck app route plan for a URL.
- * @type {import("ruck/serve.mjs").Router}
+ * @type {Router}
  */
 export default function router(url, headManager, isInitialRoute) {
   if (url.pathname === "/") {
@@ -42,7 +47,7 @@ export default function router(url, headManager, isInitialRoute) {
 /**
  * Catches a dynamic import error for route content with CSS.
  * @param {Error} cause Import error.
- * @returns {import("ruck/routePlanForContentWithCss.mjs").RouteContentWithCss}
+ * @returns {RouteContentWithCss}
  */
 function catchImportContentWithCss(cause) {
   console.error(new Error("Import rejection for route with CSS.", { cause }));

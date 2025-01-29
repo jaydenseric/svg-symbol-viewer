@@ -1,5 +1,9 @@
 // @ts-check
 
+/**
+ * @import { RouteContentWithCss } from "ruck/routePlanForContentWithCss.mjs"
+ */
+
 import { createElement as h } from "react";
 
 import useDescription from "../hooks/useDescription.mjs";
@@ -8,7 +12,7 @@ import SvgSymbolViewer, {
   css as cssSvgSymbolViewer,
 } from "./SvgSymbolViewer.mjs";
 
-/** @type {import("ruck/routePlanForContentWithCss.mjs").RouteContentWithCss["css"]} */
+/** @type {RouteContentWithCss["css"]} */
 export const css = new Set([
   ...cssSvgSymbolViewer,
 ]);
