@@ -1,4 +1,4 @@
-#!/bin/sh
+#! /bin/sh
 # Serves the Ruck app.
 
 # Asserts an environment variable is set.
