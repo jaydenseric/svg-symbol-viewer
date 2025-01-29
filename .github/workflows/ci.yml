@@ -21,3 +21,5 @@ jobs:
         run: deno fmt --check
       - name: Lint
         run: deno lint
+      - name: Type check
+        run: ./scripts/type-check.sh
