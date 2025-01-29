@@ -9,8 +9,6 @@ serve({
       : "../importMap.client.json",
     import.meta.url,
   ),
-  esModuleShimsSrc:
-    "https://unpkg.com/es-module-shims@1.7.3/dist/es-module-shims.js",
   port: Number(Deno.env.get("RUCK_PORT")),
 });
 

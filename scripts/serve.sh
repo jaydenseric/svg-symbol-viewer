@@ -21,17 +21,18 @@ if [ "$RUCK_DEV" = "true" ]
 then
   deno run \
     --allow-env \
+    --allow-import \
     --allow-net \
     --allow-read \
     --import-map=importMap.server.dev.json \
-    --watch=. \
+    --watch \
     scripts/serve.mjs
 else
   deno run \
     --allow-env \
+    --allow-import \
     --allow-net \
     --allow-read \
     --import-map=importMap.server.json \
-    --no-check \
     scripts/serve.mjs
 fi

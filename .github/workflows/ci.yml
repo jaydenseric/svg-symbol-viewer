@@ -16,7 +16,7 @@ jobs:
       - name: Setup Deno
         uses: denoland/setup-deno@v1
         with:
-          deno-version: "^1.21.2"
+          deno-version: "^2.1.7"
       - name: Format check
         run: deno fmt --check
       - name: Lint

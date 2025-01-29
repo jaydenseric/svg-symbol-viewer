@@ -1,4 +1,4 @@
-FROM denoland/deno:1.35.0
+FROM denoland/deno:2.1.7
 EXPOSE 8080
 WORKDIR /project
 ADD . .

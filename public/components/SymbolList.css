@@ -28,7 +28,8 @@
 .SymbolList__svg {
   width: var(--SymbolList-symbol-size);
   height: var(--SymbolList-symbol-size);
-  background-image: linear-gradient(
+  background-image:
+    linear-gradient(
       45deg,
       var(--SymbolList-grid-color) 25%,
       transparent 25%,
@@ -37,16 +38,17 @@
       var(--SymbolList-grid-color) 100%
     ),
     linear-gradient(
-      45deg,
-      var(--SymbolList-grid-color) 25%,
-      transparent 25%,
-      transparent 75%,
-      var(--SymbolList-grid-color) 75%,
-      var(--SymbolList-grid-color) 100%
-    );
+    45deg,
+    var(--SymbolList-grid-color) 25%,
+    transparent 25%,
+    transparent 75%,
+    var(--SymbolList-grid-color) 75%,
+    var(--SymbolList-grid-color) 100%
+  );
   background-size: calc(var(--SymbolList-grid-size) * 2)
     calc(var(--SymbolList-grid-size) * 2);
-  background-position: 0 0,
+  background-position:
+    0 0,
     var(--SymbolList-grid-size) var(--SymbolList-grid-size);
   background-color: hsl(
     var(--daui-background-hue),
