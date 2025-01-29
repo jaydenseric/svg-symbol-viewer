@@ -25,7 +25,8 @@ export RUCK_PORT="3000"
 
 ### Dev
 
-To load the environment variables from `scripts/.env.sh` and serve the Ruck app:
+To load the environment variables from `scripts/.env.sh` and serve the
+[Ruck](https://ruck.tech) app:
 
 ```sh
 ./scripts/dev.sh
@@ -33,8 +34,11 @@ To load the environment variables from `scripts/.env.sh` and serve the Ruck app:
 
 ### Serve
 
-To serve the Ruck app for either development or production (requires environment
-variables):
+> [!IMPORTANT]
+>
+> Requires environment variables.
+
+To serve the [Ruck](https://ruck.tech) app for either development or production:
 
 ```sh
 ./scripts/serve.sh
