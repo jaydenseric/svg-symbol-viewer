@@ -1,25 +1,32 @@
 name: CI
-on: [push, pull_request]
+on: [push, workflow_dispatch]
+env:
+  DENO_VERSION: "^2.1.7"
 jobs:
-  test:
-    name: Test with ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest]
-    env:
-      RUCK_DEV: "true"
-      RUCK_PORT: "8080"
+  format-check:
+    name: Format check
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
-      - name: Setup Deno
-        uses: denoland/setup-deno@v1
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v2
         with:
-          deno-version: "^2.1.7"
-      - name: Format check
-        run: deno fmt --check
-      - name: Lint
-        run: deno lint
-      - name: Type check
-        run: ./scripts/type-check.sh
+          deno-version: ${{ env.DENO_VERSION }}
+      - run: deno fmt --check
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: ${{ env.DENO_VERSION }}
+      - run: deno lint
+  type-check:
+    name: Type check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: ${{ env.DENO_VERSION }}
+      - run: ./scripts/type-check.sh
