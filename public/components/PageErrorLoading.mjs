@@ -9,7 +9,7 @@ import TransferContext from "ruck/TransferContext.mjs";
 
 import PageError, { css } from "./PageError.mjs";
 
-/** @type {RouteContentWithCss["css"]} */
+/** @satisfies {RouteContentWithCss["css"]} */
 export { css };
 
 /** React component for a loading error page. */

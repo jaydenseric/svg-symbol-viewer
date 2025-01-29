@@ -7,7 +7,7 @@
 import Icon, { css as cssIcon } from "device-agnostic-ui/Icon.mjs";
 import { createElement as h } from "react";
 
-/** @type {RouteContentWithCss["css"]} */
+/** @satisfies {RouteContentWithCss["css"]} */
 export const css = new Set([
   ...cssIcon,
 ]);

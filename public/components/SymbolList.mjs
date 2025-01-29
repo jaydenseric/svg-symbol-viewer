@@ -7,7 +7,7 @@
 import Scroll, { css as cssScroll } from "device-agnostic-ui/Scroll.mjs";
 import { createElement as h } from "react";
 
-/** @type {RouteContentWithCss["css"]} */
+/** @satisfies {RouteContentWithCss["css"]} */
 export const css = new Set([
   ...cssScroll,
   "/components/SymbolList.css",

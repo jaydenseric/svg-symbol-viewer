@@ -10,7 +10,7 @@ import Margin, { css as cssMargin } from "device-agnostic-ui/Margin.mjs";
 import Para, { css as cssPara } from "device-agnostic-ui/Para.mjs";
 import { createElement as h } from "react";
 
-/** @type {RouteContentWithCss["css"]} */
+/** @satisfies {RouteContentWithCss["css"]} */
 export const css = new Set([
   ...cssHeading,
   ...cssMargin,

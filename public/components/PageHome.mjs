@@ -12,7 +12,7 @@ import SvgSymbolViewer, {
   css as cssSvgSymbolViewer,
 } from "./SvgSymbolViewer.mjs";
 
-/** @type {RouteContentWithCss["css"]} */
+/** @satisfies {RouteContentWithCss["css"]} */
 export const css = new Set([
   ...cssSvgSymbolViewer,
 ]);

@@ -11,7 +11,7 @@ import { createElement as h, Fragment, useCallback, useState } from "react";
 import FileDropZone, { css as cssFileDropZone } from "./FileDropZone.mjs";
 import SymbolList, { css as cssSymbolList } from "./SymbolList.mjs";
 
-/** @type {RouteContentWithCss["css"]} */
+/** @satisfies {RouteContentWithCss["css"]} */
 export const css = new Set([
   ...cssMargin,
   ...cssToggle,

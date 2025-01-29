@@ -9,7 +9,7 @@ import { createElement as h } from "react";
 
 import IconGitHub, { css as cssIconGitHub } from "./IconGitHub.mjs";
 
-/** @type {RouteContentWithCss["css"]} */
+/** @satisfies {RouteContentWithCss["css"]} */
 export const css = new Set([
   ...cssLinkText,
   ...cssIconGitHub,

@@ -7,7 +7,7 @@
 import classNameProp from "class-name-prop";
 import { createElement as h, useCallback, useState } from "react";
 
-/** @type {RouteContentWithCss["css"]} */
+/** @satisfies {RouteContentWithCss["css"]} */
 export const css = new Set([
   "/components/FileDropZone.css",
 ]);
